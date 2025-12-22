@@ -19,10 +19,7 @@ public class ObjectPoolManager : MonoBehaviour
     }
 
     [SerializeField] private Pool[] pools;
-    [SerializeField] private ObstaclePool obstaclePool;
-
     private Dictionary<GameObject, Queue<GameObject>> poolDictionary;
-    private List<ObstaclePool> obstaclePools = new List<ObstaclePool>();
 
     private void Awake()
     {
@@ -41,7 +38,7 @@ public class ObjectPoolManager : MonoBehaviour
 
             poolDictionary.Add(pool.prefab, queue);
         }
-        
+
     }
 
     private void OnEnable()

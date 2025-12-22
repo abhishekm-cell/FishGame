@@ -7,6 +7,11 @@ public static class Events
     public static Action<GameObject, Vector3, Quaternion, Action <GameObject>> RequestSpawn;
     public static Action<GameObject, GameObject> RequestDespawn;
 
-    // for points
+    // for Obstacles
     
+
+    // for points
+
+    // for GameState
+    //public static Action
 }
