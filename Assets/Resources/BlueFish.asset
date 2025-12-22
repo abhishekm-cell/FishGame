@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8c069f77ad44a2cb0fcf3013314f19, type: 3}
+  m_Name: BlueFish
+  m_EditorClassIdentifier: 
+  points: 0
+  prefab: {fileID: 2679082105737059408, guid: bd5b466bcf8b5475786c8e0da129f027, type: 3}
+  moveSpeed: 1
+  foodEffect: 2
+  effectStrength: 0.5
+  effectDuration: 2

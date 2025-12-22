@@ -6,15 +6,17 @@ public class SpawnSystem : MonoBehaviour
 {
     [Header("Spawn Settings")]
     [SerializeField] private LaneManager laneManager;
-    [SerializeField] private GameObject[] foodPrefab;
+    [SerializeField] private FoodData[] foodPrefab;
 
     [SerializeField] private float spawnX = 10f;
     [SerializeField] private float spawnInterval = 2f;
+    [SerializeField] private float spawntime;
+    [SerializeField] private GameManager gManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(Spawn), 1f, spawnInterval);
+        InvokeRepeating(nameof(Spawn), spawntime, spawnInterval);
     }
 
     // Update is called once per frame
@@ -24,7 +26,12 @@ public class SpawnSystem : MonoBehaviour
         float laneY = laneManager.GetRandomLane();
 
         Vector3 spawnPos = new Vector3(spawnX, laneY, 0f);
-        Instantiate(foodPrefab[Random.Range(0, foodPrefab.Length)],spawnPos,Quaternion.identity);
+        FoodData data = foodPrefab[Random.Range(0, foodPrefab.Length)];
+
+
+        Events.RequestSpawn?.Invoke(data.prefab, spawnPos, Quaternion.identity, obj => {obj.GetComponent<FishFood>().Init(data, gManager);});
+
+        
         
     }
 }

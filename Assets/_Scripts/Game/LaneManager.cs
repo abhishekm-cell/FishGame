@@ -1,13 +1,24 @@
 using UnityEngine;
 
+
 public class LaneManager : MonoBehaviour
 {
-    public LaneDataSO laneData;
-    public float[] lanes {get; private set;}
+    [SerializeField] private Transform laneParent;
+    public float[] lanes { get; private set; }
 
     void Awake()
     {
-        lanes = laneData.GetLaneYPositions();
+        CacheLanes();
+    }
+
+    void CacheLanes()
+    {
+        lanes = new float[laneParent.childCount];
+
+        for (int i = 0; i < laneParent.childCount; i++)
+        {
+            lanes[i] = laneParent.GetChild(i).position.y;
+        }
     }
 
     public float GetRandomLane()
@@ -20,3 +31,4 @@ public class LaneManager : MonoBehaviour
         return lanes[Mathf.Clamp(index, 0, lanes.Length - 1)];
     }
 }
+

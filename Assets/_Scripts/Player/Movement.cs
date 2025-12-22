@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,22 +7,31 @@ public class Movement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float baseMoveSpeed;
     [SerializeField] private float minY, maxY;
     [SerializeField] private float maxRotation = 25f;
     [SerializeField] private float rotationSmooth = 10f;
 
     private float targetRotation;
+    private Coroutine activeEffect;
+    
+    [Header("Swipe Settings")]
+    [SerializeField] private float swipeSensitivity = 0.01f;
+    [SerializeField] private float baseSwipeSensitivity;
     [SerializeField] private float offset;
     [SerializeField] private float swipeOffset;
 
-    [Header("Swipe Settings")]
-    [SerializeField] private float swipeSensitivity = 0.01f;
+    [Header("References")]
+    [SerializeField] private GameManager gameManager;
 
     private Vector2 startTouchPos;
     private bool isSwiping;
 
     private void Start()
     {
+        baseMoveSpeed = moveSpeed;
+        baseSwipeSensitivity = swipeSensitivity;
+
         Camera camera = Camera.main;
         float camHalfH = camera.orthographicSize;
 
@@ -94,6 +104,62 @@ public class Movement : MonoBehaviour
 
         float newRotation = Mathf.LerpAngle(currentZ, targetRotation, rotationSmooth * Time.deltaTime);
         transform.rotation = Quaternion.Euler(0f, 0f, newRotation);
+    }
+
+    public void ConsumeFood(FoodData foodData)
+    {
+        if (foodData == null)
+        {
+            Debug.LogError("ConsumeFood called with NULL FoodData");
+            return;
+        }
+
+        // Stop current effect
+        if (activeEffect != null)
+        {
+            StopCoroutine(activeEffect);
+            ResetStats(); // IMPORTANT
+            activeEffect = null;
+        }
+
+        switch (foodData.foodEffect)
+        {
+            case FoodEffect.ReduceSpeed:
+                activeEffect = StartCoroutine(ReduceSpeedEffect(foodData));
+                Debug.Log("Eating fish: Reduce Speed");
+                break;
+
+            case FoodEffect.LaggyTouch:
+                activeEffect = StartCoroutine(LaggyTouchEffect(foodData));
+                Debug.Log("Eating fish: Laggy Touch");
+                break;
+
+            default:
+                Debug.LogWarning($"Unhandled food effect: {foodData.foodEffect}");
+                break;
+        }
+    }
+
+
+    private IEnumerator ReduceSpeedEffect(FoodData foodData)
+    {
+        moveSpeed = baseMoveSpeed * (1f - foodData.effectStrength);
+        yield return new WaitForSeconds(foodData.effectDuration);
+        ResetStats();
+    }
+
+    private IEnumerator LaggyTouchEffect(FoodData foodData)
+    {
+        moveSpeed = baseMoveSpeed * (1f - foodData.effectStrength);
+        swipeSensitivity = baseSwipeSensitivity * (1f - foodData.effectStrength);
+        yield return new WaitForSeconds(foodData.effectDuration);
+        ResetStats();
+    }
+    
+    private void ResetStats()
+    {
+        moveSpeed = baseMoveSpeed;
+        swipeSensitivity = baseSwipeSensitivity;
     }
 }
 

@@ -5,6 +5,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "LaneData", menuName = "ScriptableObjects/LaneData")]
 public class LaneDataSO : ScriptableObject
 {
+    public float[] GetLaneYPositions(Transform laneParent)
+    {
+        int laneCount = laneParent.childCount;
+        float[] laneYPositions = new float[laneCount];
+
+        for (int i = 0; i < laneCount; i++)
+        {
+            laneYPositions[i] = laneParent.GetChild(i).position.y;
+        }
+
+        return laneYPositions;
+    }
+}
+
+
+
+/*
+[CreateAssetMenu(fileName = "LaneData", menuName = "ScriptableObjects/LaneData")]
+public class LaneDataSO : ScriptableObject
+{
     public int laneCount = 7;
     public float verticalOffset = 2.5f;
     public float centreY = 0f;
@@ -20,5 +40,6 @@ public class LaneDataSO : ScriptableObject
             laneYPositions[i] = startY + verticalOffset * i;
         }
         return laneYPositions;
+
     }
-}
+*/
