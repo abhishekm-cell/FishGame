@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 0
   prefab: {fileID: 2679082105737059408, guid: bd5b466bcf8b5475786c8e0da129f027, type: 3}
+  deathDelay: 0.5
   moveSpeed: 1
   foodEffect: 2
   effectStrength: 0.5

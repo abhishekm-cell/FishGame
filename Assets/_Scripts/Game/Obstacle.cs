@@ -7,11 +7,12 @@ public class Obstacle : MonoBehaviour
     private ObstacleData obsdata;
     private GameManager gManager;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private GameObject hook;
+    [SerializeField] private Collider2D hookCollider;
     [SerializeField] private GameObject prefab;
 
     [SerializeField] private float amplitude ; // How far up and down
     [SerializeField] private float frequency; // How fast it moves
+    [SerializeField] private bool isReeling = false;
 
     private Vector2 startPos; 
     public void Init(ObstacleData data, GameManager gameManager)
@@ -28,8 +29,16 @@ public class Obstacle : MonoBehaviour
 
     void Update()
     {
-        MoveLeft();
-        MoveUpDown();
+        if(!isReeling)
+        {
+            MoveLeft();
+            MoveUpDown();
+        }
+        else
+        {
+            ReelIn();
+        }
+        
     }
 
     private void MoveUpDown()
@@ -43,18 +52,32 @@ public class Obstacle : MonoBehaviour
         transform.Translate(Vector3.left * UnityEngine.Random.Range(moveSpeed, obsdata.horiSpeed) * Time.deltaTime);
     }
 
+    private void ReelIn()
+    {
+        transform.Translate(Vector3.up * obsdata.reelSpeed * Time.deltaTime);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("DeSpawner"))
         {
             Events.RequestDespawn?.Invoke(gameObject,obsdata.prefab);
         }
-
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if(collision.otherCollider == hookCollider)
         {
-            //gManager.GetPlayerMovement().Die();
-            Debug.Log("GAME OVER");
+            Debug.Log("COLLIDED WITH HOOK");
+            isReeling = true;
+            // if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+            // {
+            //     Debug.Log("GAME OVER");
+            //     isReeling = true;
+            //     //gManager.GetPlayerMovement().Die();
+            //     //ReelIn();
+                
+            // }
         }
+
+        
     }
 
 

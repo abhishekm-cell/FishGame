@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: 25d4b92ee17eb469faf347d469574680
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1330
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f662fe65f864f21b9faf11a1d2ac8c
+      internalID: -2130303638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1330
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548d8020d744f45e88d2578a536bea6c
+      internalID: -2064778303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1330
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202aa9822817c46e5819fb82b210fd95
+      internalID: -548487758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1330
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b13d31effbe48bba8b8a9c6e0dc7eb
+      internalID: 1074904790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1330
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698ec583f4a72472f8244d1c708e5b94
+      internalID: -692502931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1330
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9571746a7450248b1a0cc39496e306b2
+      internalID: -396976810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1064
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53f86165172e4c80b3aff3b8e15a2bc
+      internalID: 1116697401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1064
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79686809ea704a20ad86352f3553b8a
+      internalID: 1510845068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1064
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744200dbbec15490b883cbc0487d392c
+      internalID: -1979192197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1064
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600c3f4c893964619a712e6bf9a8e04a
+      internalID: 1021276180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1064
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b3221169283452b921947cdca7756a
+      internalID: 669694300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1064
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272684c35ff3b4abe98ece31b873dc13
+      internalID: -192143294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 798
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f581bc031bd9443acb2574f70b8e1417
+      internalID: -2094095938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 798
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c168261f348584533af843631f6c0c43
+      internalID: -712551503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 798
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a48869d5ab1c4c14a84e7d25764a72a
+      internalID: -1216595650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 798
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74261ed1078004e638bc0f39eb90a6c0
+      internalID: -1504865086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 798
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a634415d7f24dbabcea5a7e9babded
+      internalID: 883977366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 798
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc6abed2e5434be699a6e7a5e4a24f0
+      internalID: -992473033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbc7d4fd26784888a3010612e783180
+      internalID: 1602961750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 532
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01447e9e0962d4760a6c1bfead11e805
+      internalID: 1151718330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 532
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfd843d6834346058e8341bc19125ce
+      internalID: 861307228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 532
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b089d0ee0972410d86177c8a9fd46d9
+      internalID: -1250167802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 532
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ed8ed210825466aa5b5456d9831bdf
+      internalID: -588341557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 532
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9549bc804e9634d038f5717ac1334619
+      internalID: 1924948362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8a444b456fc46c49a1ba2d3af46d13
+      internalID: 1423186553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 266
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689756be8c7a3453386bb1221fa4cd80
+      internalID: -2088701672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 266
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc4d29a45b7a4114b239ff0824c72d7
+      internalID: -334287047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 266
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d193950eb21c54425a0c54e36683d465
+      internalID: 5902373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 266
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c533ec23ea94f00a259f3bd5467082
+      internalID: 1461870679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 266
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d2d0024443e4ce096740f6a6dd9595
+      internalID: 1900404426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d218a0a2d53dc40918a77d9fe693570c
+      internalID: -2056595793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_31
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed19bfa1c49014ba88529140d194beea
+      internalID: -1361085281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_32
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 0
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdd16cb8993f4a778dfa7e32ae86735
+      internalID: 1179225174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_33
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 0
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2aa2af2f750d412b9dcd8860c0b61a0
+      internalID: -1660994609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 0
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e256e5a6157c043f1a942aee016e05a1
+      internalID: -984615134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 0
+        width: 277
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a31fc061590a471aae991962e8d0eb8
+      internalID: -888021946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_0: -2130303638
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_1: -2064778303
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_10: 669694300
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_11: -192143294
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_12: -2094095938
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_13: -712551503
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_14: -1216595650
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_15: -1504865086
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_16: 883977366
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_17: -992473033
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_18: 1602961750
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_19: 1151718330
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_2: -548487758
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_20: 861307228
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_21: -1250167802
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_22: -588341557
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_23: 1924948362
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_24: 1423186553
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_25: -2088701672
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_26: -334287047
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_27: 5902373
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_28: 1461870679
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_29: 1900404426
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_3: 1074904790
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_30: -2056595793
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_31: -1361085281
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_32: 1179225174
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_33: -1660994609
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_34: -984615134
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_35: -888021946
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_4: -692502931
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_5: -396976810
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_6: 1116697401
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_7: 1510845068
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_8: -1979192197
+      A-2D-vector-art-side-scrolling-game-sprite-of-a-fr-256px-36 (1)_9: 1021276180
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

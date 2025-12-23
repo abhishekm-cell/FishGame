@@ -11,5 +11,6 @@ public class ObstacleData : ScriptableObject
     public float minFrequency;
 
     public float horiSpeed; // movespeed horizontal
+    public float reelSpeed;
 
 }

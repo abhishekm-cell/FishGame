@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+    // need to add size scale threshold, players starts from 0.75 and grows till 2
+
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float baseMoveSpeed;
@@ -25,6 +28,8 @@ public class Movement : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Animator anim;
+
+    
 
     private Vector2 startTouchPos;
     private bool isSwiping;
@@ -174,6 +179,7 @@ public class Movement : MonoBehaviour
         moveSpeed = baseMoveSpeed;
         swipeSensitivity = baseSwipeSensitivity;
     }
+
 }
 
 

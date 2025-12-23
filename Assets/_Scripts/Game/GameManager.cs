@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpawnSystem spawnSystem;
     [SerializeField] private LaneManager laneManager;
     [SerializeField] private Movement playermove;
+    //[SerializeField] private bool baitEaten = false;
     // managers
     public ObjectPoolManager GetObjectPoolManager() => objectPoolManager; 
     public SpawnSystem GetSpawnSystem() => spawnSystem;

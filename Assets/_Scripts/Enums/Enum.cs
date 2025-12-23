@@ -4,3 +4,11 @@ public enum FoodEffect
     ReduceSpeed,
     LaggyTouch,
 }
+
+public enum GrowthStage
+{
+    Small,
+    Medium,
+    Large,
+    Kraken,
+}

@@ -36,8 +36,7 @@ public class FishFood : MonoBehaviour
                 Debug.Log("Game Manager is NULL");  
             }
             gManager.GetPlayerMovement().ConsumeFood(data);
-            Debug.Log("Collided with Player");
-
+            
             StartCoroutine(DelayDeath());
             return;
         }
@@ -46,11 +45,13 @@ public class FishFood : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("DeSpawner"))
         {
             Events.RequestDespawn?.Invoke(gameObject, data.prefab);
+            
         }
     }
 
     private IEnumerator DelayDeath()
     {
+        Debug.Log("Delaying Death");
         yield return new WaitForSeconds(data.deathDelay);
         Events.RequestDespawn?.Invoke(gameObject, data.prefab);
     }

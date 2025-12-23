@@ -19,3 +19,4 @@ MonoBehaviour:
   minAmplitude: 0
   minFrequency: 0
   horiSpeed: 4
+  reelSpeed: 5
