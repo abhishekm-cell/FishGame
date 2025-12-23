@@ -7,6 +7,7 @@ public class FoodData : ScriptableObject
     public int points;
     [Header("Prefab")]
     public GameObject prefab;
+    public float deathDelay = 0.5f;
     
     [Header("Movment")]
     public float moveSpeed;

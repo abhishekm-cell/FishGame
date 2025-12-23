@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -37,7 +38,7 @@ public class FishFood : MonoBehaviour
             gManager.GetPlayerMovement().ConsumeFood(data);
             Debug.Log("Collided with Player");
 
-            Events.RequestDespawn?.Invoke(gameObject, data.prefab);
+            StartCoroutine(DelayDeath());
             return;
         }
 
@@ -46,6 +47,12 @@ public class FishFood : MonoBehaviour
         {
             Events.RequestDespawn?.Invoke(gameObject, data.prefab);
         }
+    }
+
+    private IEnumerator DelayDeath()
+    {
+        yield return new WaitForSeconds(data.deathDelay);
+        Events.RequestDespawn?.Invoke(gameObject, data.prefab);
     }
 
 

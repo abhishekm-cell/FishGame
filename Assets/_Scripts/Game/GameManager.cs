@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,4 +12,8 @@ public class GameManager : MonoBehaviour
     public SpawnSystem GetSpawnSystem() => spawnSystem;
     public LaneManager GetLaneManager() => laneManager;
     public Movement GetPlayerMovement() => playermove;
+    void Awake()
+    {
+        
+    }
 }

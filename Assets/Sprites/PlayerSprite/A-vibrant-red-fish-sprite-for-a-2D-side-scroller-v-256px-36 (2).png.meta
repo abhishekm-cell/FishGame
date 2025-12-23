@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: dad1e2ad6b6f441c9866fa00b4d23569
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1185
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1fd1dcb0ac247c09a6bbcaf674f81d
+      internalID: 1431040988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1185
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee100875c5df94d82933a9875ad190c0
+      internalID: -1824619595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1185
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a9c7c61ad2e48ac89d0755755b07a5
+      internalID: -1060455382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1185
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b72a458c19c42b49a4de482e77a28c
+      internalID: -231016899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1185
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba927819258fd489993a4d7728839426
+      internalID: -1078523966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1185
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba3e14bd5ded4276b466bb98be3df66
+      internalID: 836953907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507bf04d51cc243f9b7f71f3a56dcdbf
+      internalID: 766111875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 948
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ef5c8bd33544281b3bf6b67be1e652
+      internalID: -1035096769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 948
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16d89d9e10d54c44a08d04e3b1c4e97
+      internalID: -1027724006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 948
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c38859d0dd44f5bacdfada7fb86df7
+      internalID: 680444418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 948
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6c84078138049229c8ad7f1a794edf
+      internalID: -40068146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 948
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f48b1f1252348968beba78d37a2ec9
+      internalID: -123802917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 711
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cfd618ce7c945c8bd2a4335276a202
+      internalID: -1785455857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 711
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0002b9e525d8f426b879f985095ca6cd
+      internalID: -2092824259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 711
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ceeb741f28b4d95a68a88f41e14c62
+      internalID: 739392330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 711
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f8bab2e8a924f959ebbe697d7f2a8d
+      internalID: 212520109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 711
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88c85821e06245329db250c994572ff
+      internalID: 411519339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 711
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37f00cb0706c4036ab80457a9fef23c
+      internalID: 1256174742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672d06d109cb34cc7ab240e3c55de0e7
+      internalID: -1797492319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_19
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 474
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b3dbdb4479f40f1bddb4337dd94bc9
+      internalID: -723085426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_20
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 474
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442212371b1dd47ed97c88896e7f154b
+      internalID: -1559543670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_21
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 474
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e280504a5bf0743179795ea1f29e8839
+      internalID: -786275457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_22
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 474
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e031dcff79ea044f8b2dbb8deccaa60f
+      internalID: -1653786913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_23
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 474
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de665b24e8e34413b53f940ff0cf95a
+      internalID: 1901617964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec388dd284d64b7e87aa41061d33c36
+      internalID: -122844470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_25
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 237
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25de44544eb69421c8e463a0cfe90e33
+      internalID: 2043016526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_26
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 237
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5802fcbcb9a0445cd8329d6242f96ad9
+      internalID: 1942841527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_27
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 237
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e59ee08e17b4089a3f58e7ef579d1a
+      internalID: -1397534809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_28
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 237
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1007695a03b214cc088a96233a9d0b7d
+      internalID: 1987877350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_29
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 237
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3eb7ccd6932f45b39272c680679ab8c
+      internalID: 636753211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309f424fb076e4937a310a3b3c5a36db
+      internalID: -479984356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_31
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11f4d2ab8b2a40feb3e3db7eff2d5f9
+      internalID: 483632922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_32
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 0
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8e791645b5447b39133e50409cdf05
+      internalID: 1630541022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_33
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 0
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a253f7c30c8448a8a1f4776f3adfad
+      internalID: 1970313545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_34
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 0
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbda2f1b1219644e795466376994e8a4
+      internalID: -1811306613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_35
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 0
+        width: 277
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b33c7b9ccb64d99b2cb9561f06d76a
+      internalID: 702724882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_0: 1431040988
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_1: -1824619595
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_10: -40068146
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_11: -123802917
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_12: -1785455857
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_13: -2092824259
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_14: 739392330
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_15: 212520109
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_16: 411519339
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_17: 1256174742
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_18: -1797492319
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_19: -723085426
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_2: -1060455382
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_20: -1559543670
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_21: -786275457
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_22: -1653786913
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_23: 1901617964
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_24: -122844470
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_25: 2043016526
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_26: 1942841527
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_27: -1397534809
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_28: 1987877350
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_29: 636753211
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_3: -231016899
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_30: -479984356
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_31: 483632922
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_32: 1630541022
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_33: 1970313545
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_34: -1811306613
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_35: 702724882
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_4: -1078523966
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_5: 836953907
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_6: 766111875
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_7: -1035096769
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_8: -1027724006
+      A-vibrant-red-fish-sprite-for-a-2D-side-scroller-v-256px-36 (2)_9: 680444418
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

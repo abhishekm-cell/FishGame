@@ -78,5 +78,12 @@ public class ObjectPoolManager : MonoBehaviour
     }
 }
 
+public class Demodata
+{
+    public GameObject prefab;
+    public Vector3 pos;
+    public Quaternion rot;
+}
+
 
          

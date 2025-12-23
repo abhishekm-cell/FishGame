@@ -11,7 +11,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private float minY, maxY;
     [SerializeField] private float maxRotation = 25f;
     [SerializeField] private float rotationSmooth = 10f;
-
+    private float lastEatTime;
+    [SerializeField] private float eatAnimCooldown = 0.2f;
     private float targetRotation;
     private Coroutine activeEffect;
     
@@ -23,6 +24,7 @@ public class Movement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private Animator anim;
 
     private Vector2 startTouchPos;
     private bool isSwiping;
@@ -108,11 +110,22 @@ public class Movement : MonoBehaviour
 
     public void ConsumeFood(FoodData foodData)
     {
+        
         if (foodData == null)
         {
             Debug.LogError("ConsumeFood called with NULL FoodData");
             return;
         }
+
+        if (anim != null)
+        {
+            if (Time.time - lastEatTime > eatAnimCooldown)
+            {
+                anim.SetTrigger("Eat");
+                lastEatTime = Time.time;
+            }
+        }
+        
 
         // Stop current effect
         if (activeEffect != null)
