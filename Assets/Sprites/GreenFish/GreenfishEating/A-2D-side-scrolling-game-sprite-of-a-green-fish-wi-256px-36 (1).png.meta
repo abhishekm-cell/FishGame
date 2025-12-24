@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: 469db44b75df7438d88f2dbebd009631
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1015
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49660ea9419244143bf12b49367bf9c3
+      internalID: -751804060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1015
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37d5dfc3c7914a83bae8eb4300d5528
+      internalID: 376906404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1015
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fde446bf899c41058b9cd3f2b567a44
+      internalID: 1167621065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1015
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afb61a41ef144a9d900b48c3bb50aea
+      internalID: 2061111268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1015
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d21e39e15f3461aa5ac948ae04e97d
+      internalID: 125566106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 1015
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14cc3ee2415c4e85b944cb0f87adff2
+      internalID: 2143314734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d53c5f2b5c342dcbf42efe66c211af
+      internalID: -1602703816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 812
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c262fe4b0072420fb1723c15bd09cf9
+      internalID: 653926405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 812
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f8e3524be854a2cb5e354af9c5715f
+      internalID: -1517311988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 812
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1abe580f16184256ad65dac720db658
+      internalID: -271124700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 812
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854ede11fbd164c29809cb275687be2d
+      internalID: -597442417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 812
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fc8b34c6b5748a3af809858ad70900
+      internalID: -1764676597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26046baf620b44d6cbcc89e329178e55
+      internalID: -1224705342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 609
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd0574c22366483cbac3e71bc7149de
+      internalID: -1226342351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 609
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc42324d95f014b6c81da4b8240737dd
+      internalID: 1438038724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 609
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68957893dcd749f08fe50b9b572a7b7
+      internalID: 1414874626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 609
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4ce83a1557346aeab5e5479d448643
+      internalID: -1503714195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 609
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ab1e66f608048d888789081d96a404
+      internalID: -1705963141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71f9e109f6714102a3cfb8b533865da
+      internalID: 1184470472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 406
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a35bf285c0741fa9bb7a2ac5b3f92f
+      internalID: 274108223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 406
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3940f402edd4511b0159bdf462a9fa
+      internalID: 487849566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 406
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47adc7b9a26d6400690bb69649a447ae
+      internalID: 1704453108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 406
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13604e86b095f4ad0923318b571ac137
+      internalID: -415623837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 406
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19822fd3f6fe14bf7bda89090341d968
+      internalID: -1069389015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b05fd935129f41de8fcbf4cd9dc21c5
+      internalID: -1244855094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 203
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f434912a3b4944cf69020dcc7f1594c3
+      internalID: -646901159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 203
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431ac2c3dedef42f48bb5604fd31dbbe
+      internalID: -681060446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 203
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084099661fa0a4afd847177babbe5b71
+      internalID: -569387958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 203
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eeb0ece4d134d47bc63d7cd784b219
+      internalID: 109956235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 203
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb30d38aff32468581f80c046e78f27
+      internalID: 784356697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe43799de23643f0a26bb5692180800
+      internalID: -90978645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_31
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98e337dcac33400ab3d3fc5e1dca92c
+      internalID: -2099919956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_32
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 0
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ed6bda442c542a1bbaf89843d8cb7d
+      internalID: -781407353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_33
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 0
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f68ff7dd33364aca89d205319e64300
+      internalID: 1641314712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 0
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d0418bbd1c245a0ae14768fb6d652b
+      internalID: -256187198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 0
+        width: 298
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87949631d6e2f422e9bbe9a8e6f46311
+      internalID: 593828045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_0: -751804060
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_1: 376906404
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_10: -597442417
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_11: -1764676597
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_12: -1224705342
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_13: -1226342351
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_14: 1438038724
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_15: 1414874626
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_16: -1503714195
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_17: -1705963141
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_18: 1184470472
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_19: 274108223
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_2: 1167621065
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_20: 487849566
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_21: 1704453108
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_22: -415623837
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_23: -1069389015
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_24: -1244855094
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_25: -646901159
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_26: -681060446
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_27: -569387958
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_28: 109956235
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_29: 784356697
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_3: 2061111268
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_30: -90978645
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_31: -2099919956
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_32: -781407353
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_33: 1641314712
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_34: -256187198
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_35: 593828045
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_4: 125566106
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_5: 2143314734
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_6: -1602703816
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_7: 653926405
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_8: -1517311988
+      A-2D-side-scrolling-game-sprite-of-a-green-fish-wi-256px-36 (1)_9: -271124700
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

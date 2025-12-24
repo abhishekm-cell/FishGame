@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5675340d8a4cf4b25b3797cbdb261cf0, type: 2}
+  anim: {fileID: 9060718416925344842}
 --- !u!61 &6938730427651109358
 BoxCollider2D:
   m_ObjectHideFlags: 0

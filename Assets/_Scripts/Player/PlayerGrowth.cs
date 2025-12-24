@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerGrowth : MonoBehaviour
@@ -7,12 +8,16 @@ public class PlayerGrowth : MonoBehaviour
     [SerializeField] private List<PlayerFoodGrowthData> stages;
     [Header("RunTime")]
     [SerializeField] private GrowthStage currentStage = GrowthStage.Small;
+    private GameManager gameManager;
 
     private int eaten1, eaten5, eaten10;
-    
-
     private PlayerFoodGrowthData Current => stages.Find(s => s.stage == currentStage);
 
+
+    public void SetReferences(GameManager gameManager)
+    {
+        this.gameManager = gameManager;
+    }
 
     public bool CanEatFood(FoodData food)
     {
@@ -21,6 +26,7 @@ public class PlayerGrowth : MonoBehaviour
 
     public void RegisterFood(FoodData food)
     {
+        Debug.Log("Eating " + food.name);
         switch(food.points)
         {
             case 1: eaten1++; break;
@@ -28,7 +34,7 @@ public class PlayerGrowth : MonoBehaviour
             case 10: eaten10++; break;
         }
 
-        //CheckGrowth();
+        CheckGrowth();
     }
 
     private void CheckGrowth()
@@ -48,13 +54,21 @@ public class PlayerGrowth : MonoBehaviour
         }
         currentStage++ ;
 
-        //StartCoroutine
+        StartCoroutine(ScaleUp(Current.targetScale));
     }
 
-    // private IEnumerator ScaleUp(Vector3 target)
-    // {
-        
-    // }
+    private IEnumerator ScaleUp(Vector3 target)
+    {
+        Vector3 start = transform.localScale;
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(start, target, t);
+            yield return null;
+        }
+    }
 
 
 }

@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 6be157aaf4e544d28ac388a14af1ca63, type: 2}
+  anim: {fileID: 3824987804155492371}
 --- !u!212 &8576989324000220171
 SpriteRenderer:
   m_ObjectHideFlags: 0

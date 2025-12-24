@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8c069f77ad44a2cb0fcf3013314f19, type: 3}
-  m_Name: BlueFish
+  m_Script: {fileID: 11500000, guid: c3841baca22894664866a622d6af6bfe, type: 3}
+  m_Name: KrakenStage
   m_EditorClassIdentifier: 
-  points: 15
-  prefab: {fileID: 2679082105737059408, guid: bd5b466bcf8b5475786c8e0da129f027, type: 3}
-  deathDelay: 0.5
-  moveSpeed: 1
-  foodEffect: 2
-  effectStrength: 0.5
-  effectDuration: 2
+  stage: 3
+  targetScale: {x: 2, y: 2, z: 0}
+  smallFish: 0
+  mediumFish: 0
+  largeFish: 0
+  maxAllowedLimit: 15

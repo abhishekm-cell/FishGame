@@ -262,6 +262,7 @@ MonoBehaviour:
   spawnSystem: {fileID: 1407260091}
   laneManager: {fileID: 2085938673}
   playermove: {fileID: 1987786216}
+  playerGrowth: {fileID: 1987786220}
 --- !u!1 &323825737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,11 +2519,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987786214}
-  - component: {fileID: 1987786216}
+  - component: {fileID: 1987786218}
   - component: {fileID: 1987786215}
   - component: {fileID: 1987786217}
-  - component: {fileID: 1987786218}
   - component: {fileID: 1987786219}
+  - component: {fileID: 1987786216}
+  - component: {fileID: 1987786220}
   m_Layer: 7
   m_Name: Fish
   m_TagString: Player
@@ -2693,6 +2695,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1987786220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987786213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb9a60fce8484d59b0f990a4f0412ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stages:
+  - {fileID: 11400000, guid: 7ac0e03400de74dd9a6a365abfd44d13, type: 2}
+  - {fileID: 11400000, guid: 46cf4132cd6814c4a97c56b86730f9b4, type: 2}
+  - {fileID: 11400000, guid: 8c96ed1d7d2ed41529fa0f8582931871, type: 2}
+  - {fileID: 11400000, guid: 558532e7366c4428badaf5b5fa9a673a, type: 2}
+  currentStage: 0
 --- !u!1001 &2040338272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3152,7 +3172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2679082105737059408, guid: bd5b466bcf8b5475786c8e0da129f027, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2679082105737059415, guid: bd5b466bcf8b5475786c8e0da129f027, type: 3}
       propertyPath: m_RootOrder

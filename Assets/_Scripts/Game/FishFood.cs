@@ -1,19 +1,20 @@
 using System;
 using System.Collections;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class FishFood : MonoBehaviour
 {
-    [SerializeField]private FoodData data;
+    public FoodData data;
     private const string playerTag = "Player";
     private GameManager gManager;
+    [SerializeField] private Animator anim;
 
-    public void Init(FoodData foodData , GameManager gameManager)
+    public void Init(FoodData foodData )
     {
         data = foodData;
-        this.gManager = gameManager;
     }
+    public void SetReference(GameManager gameManager) => this.gManager = gameManager;
+    
 
     void Update()
     {
@@ -33,8 +34,23 @@ public class FishFood : MonoBehaviour
         {
             if(gManager == null)
             {
-                Debug.Log("Game Manager is NULL");  
+                Debug.LogError("GameManager is NULL. SetReference() was not called.");
+                return;  
             }
+            if(gManager.GetPlayerGrowth() == null)
+            {
+                Debug.Log("PlayerGrowth is NULL");
+                return;
+            }
+            if(!gManager.GetPlayerGrowth().CanEatFood(data))
+            {
+                Debug.Log("Player too small to eat this fish");
+                anim.SetTrigger("Eat");
+                return;
+            }
+
+            gManager.GetPlayerGrowth().RegisterFood(data);
+
             gManager.GetPlayerMovement().ConsumeFood(data);
             
             StartCoroutine(DelayDeath());
@@ -48,13 +64,13 @@ public class FishFood : MonoBehaviour
             
         }
     }
-
     private IEnumerator DelayDeath()
     {
         Debug.Log("Delaying Death");
         yield return new WaitForSeconds(data.deathDelay);
         Events.RequestDespawn?.Invoke(gameObject, data.prefab);
     }
+    
 
 
     // public void OnSpawn()

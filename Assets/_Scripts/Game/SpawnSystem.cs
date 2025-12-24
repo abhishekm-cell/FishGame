@@ -34,7 +34,7 @@ public class SpawnSystem : MonoBehaviour
         FoodData data = foodPrefab[UnityEngine.Random.Range(0, foodPrefab.Length)];
 
 
-        Events.RequestSpawn?.Invoke(data.prefab, spawnPos, Quaternion.identity, obj => {obj.GetComponent<FishFood>().Init(data, gManager);});
+        Events.RequestSpawn?.Invoke(data.prefab, spawnPos, Quaternion.identity, obj => {FishFood food =obj.GetComponent<FishFood>(); food.Init(data); food.SetReference(gManager);});
         
     }
 
