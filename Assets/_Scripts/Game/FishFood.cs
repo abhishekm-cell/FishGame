@@ -46,6 +46,7 @@ public class FishFood : MonoBehaviour
             {
                 Debug.Log("Player too small to eat this fish");
                 anim.SetTrigger("Eat");
+                gManager.GetPlayerMovement().PlayerDie();
                 return;
             }
 

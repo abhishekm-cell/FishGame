@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float eatAnimCooldown = 0.2f;
     private float targetRotation;
     private Coroutine activeEffect;
+    private float delaydeath;
     
     [Header("Swipe Settings")]
     [SerializeField] private float swipeSensitivity = 0.01f;
@@ -179,6 +180,13 @@ public class Movement : MonoBehaviour
         moveSpeed = baseMoveSpeed;
         swipeSensitivity = baseSwipeSensitivity;
     }
+
+    public void PlayerDie()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    
 
 }
 
