@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   targetScale: {x: 1.2, y: 1.2, z: 0}
-  smallFish: 10
+  smallFish: 20
   mediumFish: 15
   largeFish: 0
   maxAllowedLimit: 5

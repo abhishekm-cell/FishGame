@@ -19,6 +19,18 @@ public class PlayerGrowth : MonoBehaviour
         this.gameManager = gameManager;
     }
 
+
+    void OnEnable()
+    {
+        Events.ResetGame += ResetGrowth;
+    }
+
+    void OnDisable()
+    {
+        Events.ResetGame -= ResetGrowth;
+    }
+
+
     public bool CanEatFood(FoodData food)
     {
         return food.points <= Current.maxAllowedLimit ;
@@ -68,6 +80,14 @@ public class PlayerGrowth : MonoBehaviour
             transform.localScale = Vector3.Lerp(start, target, t);
             yield return null;
         }
+    }
+    
+    public void ResetGrowth()
+    {
+        currentStage = GrowthStage.Small;
+        eaten1 = eaten5 = eaten10 = 0;
+        transform.localScale = stages[0].targetScale;
+        
     }
 
 

@@ -13,5 +13,6 @@ public class PlayerFoodGrowthData : ScriptableObject
 
     [Header("Allowed Limit")]
 
-    public int maxAllowedLimit;    
+    public int maxAllowedLimit;  
+      
 }

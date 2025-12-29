@@ -43,14 +43,23 @@ public class ObjectPoolManager : MonoBehaviour
 
     private void OnEnable()
     {
+        Events.GameInit += GameInit;
         Events.RequestSpawn += HandleSpawn;
         Events.RequestDespawn += HandleDespawn;
+        Events.ResetGame += DeSpawnAll;
     }
 
     private void OnDisable()
     {
+        Events.GameInit -= GameInit;
         Events.RequestSpawn -= HandleSpawn;
         Events.RequestDespawn -= HandleDespawn;
+        Events.ResetGame -= DeSpawnAll;
+    }
+
+    void GameInit()
+    {
+        DeSpawnAll();
     }
 
     void HandleSpawn(GameObject prefab, Vector3 pos, Quaternion rot, Action<GameObject> callback)
@@ -73,17 +82,46 @@ public class ObjectPoolManager : MonoBehaviour
 
     void HandleDespawn(GameObject instance, GameObject prefab)
     {
+        if(!poolDictionary.ContainsKey(prefab))
+        {
+            Debug.LogError(
+            $"Trying to despawn {instance.name} but prefab {prefab.name} is NOT pooled");
+            instance.SetActive(false);
+            return;
+        }
         instance.SetActive(false);
         poolDictionary[prefab].Enqueue(instance);
     }
+
+    private void DeSpawnAll()
+    {
+        Debug.Log("Despawning all objects");
+        foreach (var pair in poolDictionary)
+        {
+            var prefab = pair.Key;
+            var queue = pair.Value;
+
+            foreach (Transform child in transform)
+            {
+                if (child.gameObject.activeSelf && child.name.Contains(prefab.name))
+                {
+                    child.gameObject.SetActive(false);
+                    queue.Enqueue(child.gameObject);
+                }
+            }
+        }
+    }
+
+
+
 }
 
-public class Demodata
-{
-    public GameObject prefab;
-    public Vector3 pos;
-    public Quaternion rot;
-}
+// public class Demodata
+// {
+//     public GameObject prefab;
+//     public Vector3 pos;
+//     public Quaternion rot;
+// }
 
 
          

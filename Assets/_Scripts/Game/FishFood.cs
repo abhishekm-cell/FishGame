@@ -47,10 +47,15 @@ public class FishFood : MonoBehaviour
                 Debug.Log("Player too small to eat this fish");
                 anim.SetTrigger("Eat");
                 gManager.GetPlayerMovement().PlayerDie();
+                gManager.TriggerGameOver();
+                //Events.ShowGameOverInvoke();
                 return;
             }
 
             gManager.GetPlayerGrowth().RegisterFood(data);
+            // gManager.SetScore(data.points);
+            // Events.UpdateScoreInvoke(data.points);
+            Events.ScoreGainedInvoke(data.points);
 
             gManager.GetPlayerMovement().ConsumeFood(data);
             

@@ -18,13 +18,42 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] private ObstacleData obstacleData;
 
     // Start is called before the first frame update
-    void Start()
+    // void Start()
+    // {
+    //     InvokeRepeating(nameof(Spawn), spawntime, spawnInterval);
+    //     InvokeRepeating(nameof(SpawnFishHook), obstacleSpawnTime, obstacleSpawnInterval);
+    // }
+
+    public void SetReference(GameManager gameManager)
+    {
+        gManager = gameManager;
+    }
+
+    void OnEnable()
+    {
+        Events.GameStarted += StartSpawning;
+        Events.GamePaused += StopSpawning;
+        Events.ResetGame += StopSpawning;
+    }
+
+    void OnDisable()
+    {
+        Events.GameStarted -= StartSpawning;
+        Events.GamePaused -= StopSpawning;
+        Events.ResetGame -= StopSpawning;
+    }
+
+    
+    private void StartSpawning()
     {
         InvokeRepeating(nameof(Spawn), spawntime, spawnInterval);
         InvokeRepeating(nameof(SpawnFishHook), obstacleSpawnTime, obstacleSpawnInterval);
-    }
-
-    // Update is called once per frame
+    } 
+    private void StopSpawning()
+    {
+        CancelInvoke(nameof(Spawn));
+        CancelInvoke(nameof(SpawnFishHook));
+    } 
     
     private void Spawn()
     {

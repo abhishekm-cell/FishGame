@@ -20,6 +20,7 @@ public class Obstacle : MonoBehaviour
         obsdata = data;
         gManager = gameManager;
     }
+    public void SetReference(GameManager gameManager) => this.gManager = gameManager;
     void Start()
     {
         frequency =  UnityEngine.Random.Range(obsdata.minFrequency, obsdata.maxFrequency); 
@@ -63,22 +64,34 @@ public class Obstacle : MonoBehaviour
         {
             Events.RequestDespawn?.Invoke(gameObject,obsdata.prefab);
         }
-        if(collision.otherCollider == hookCollider)
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("DeSpawner"))
         {
-            Debug.Log("COLLIDED WITH HOOK");
-            isReeling = true;
-            // if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-            // {
-            //     Debug.Log("GAME OVER");
-            //     isReeling = true;
-            //     //gManager.GetPlayerMovement().Die();
-            //     //ReelIn();
-                
-            // }
+            Events.RequestDespawn?.Invoke(gameObject,obsdata.prefab);
         }
 
+        if (!other.CompareTag("Player")) 
+        {
+            return;
+        }
+
+        Debug.Log("Player hooked!");
+
+        isReeling = true;
+        Events.ShowGameOverInvoke();
         
+        if (gManager.GetPlayerMovement() != null)
+        {
+            gManager.GetPlayerMovement().StartReel(transform, obsdata.reelSpeed);
+        }
+
     }
+
+    
 
 
 }

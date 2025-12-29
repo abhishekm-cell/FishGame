@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
     // need to add size scale threshold, players starts from 0.75 and grows till 2
 
     [Header("Movement")]
@@ -14,8 +12,10 @@ public class Movement : MonoBehaviour
     [SerializeField] private float minY, maxY;
     [SerializeField] private float maxRotation = 25f;
     [SerializeField] private float rotationSmooth = 10f;
+    [SerializeField] private Vector2 startPos;
     private float lastEatTime;
     [SerializeField] private float eatAnimCooldown = 0.2f;
+    
     private float targetRotation;
     private Coroutine activeEffect;
     private float delaydeath;
@@ -46,11 +46,41 @@ public class Movement : MonoBehaviour
         minY = camera.transform.position.y - camHalfH;
         maxY = camera.transform.position.y + camHalfH;
     }
-    
+
+    public void SetReference(GameManager gameManager) => this.gameManager = gameManager;
+
+    void OnEnable()
+    {
+        Events.GameInit += MakeSwipeFalse;
+        Events.GameStarted += MakeSwipeTrue;
+        Events.GamePaused += MakeSwipeFalse;
+        Events.ResetGame += ResetPlayer;
+    }
+
+    void OnDisable()
+    {
+        Events.GameInit -= MakeSwipeFalse;
+        Events.GameStarted -= MakeSwipeTrue;
+        Events.GamePaused -= MakeSwipeFalse;
+        Events.ResetGame -= ResetPlayer;
+    }
+
     void Update()
     {
+        if(!isSwiping) return;
+
         HandleSwipe();
         ApplyRotation();
+    }
+
+    private void MakeSwipeTrue()
+    {
+        isSwiping = true;
+    }
+
+    private void MakeSwipeFalse()
+    {
+        isSwiping = false;
     }
 
     void HandleSwipe()
@@ -160,6 +190,24 @@ public class Movement : MonoBehaviour
     }
 
 
+    public void StartReel(Transform hook, float reelSpeed)
+    {
+        StartCoroutine(ReelToHook(hook , reelSpeed));
+    }
+
+    private IEnumerator ReelToHook(Transform hook, float speed)
+    {
+        enabled = false;
+
+        while(Vector2.Distance(transform.position, hook.position) > 0.1f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, hook.position, speed * Time.deltaTime);
+            yield return null;
+        }
+
+        Debug.Log("Reeling in");
+
+    }
     private IEnumerator ReduceSpeedEffect(FoodData foodData)
     {
         moveSpeed = baseMoveSpeed * (1f - foodData.effectStrength);
@@ -185,8 +233,24 @@ public class Movement : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
+    // start coroutine to delay player death
 
-    
+    public void ResetPlayer()
+    {
+        transform.position = startPos;
+        gameObject.SetActive(true);
+        enabled = true;
+        Debug.Log("Player Reset");
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("DeSpawner"))
+        {
+            PlayerDie();
+            gameManager.TriggerGameOver();
+        }
+    }
 
 }
 

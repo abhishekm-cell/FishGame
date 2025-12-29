@@ -4,6 +4,7 @@ using UnityEngine;
 public class ObstacleData : ScriptableObject
 {
     public GameObject prefab;
+    public GameObject baitPrefab;
     public Vector2 SpawnPoint;
     public float maxAmplitude; // length of Y movement // How far up and down
     public float maxFrequency; //  up/down speed for ping pong  // How fast it moves
