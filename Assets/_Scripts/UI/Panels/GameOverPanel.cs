@@ -10,12 +10,14 @@ public class GameOverPanel : MonoBehaviour
 
     void OnEnable()
     {
-        ButtonListeners();        
+        ButtonListeners();
+        AudioManager.Instance.PlaySFX(SoundType.Dead);        
     }
 
     void OnDisable()
     {
-        ButtonListeners();
+        replayButton.onClick.RemoveListener(OnReplayClicked);
+        homeButton.onClick.RemoveListener(OnHomeClicked);
     }
 
     private void ButtonListeners()
@@ -27,12 +29,15 @@ public class GameOverPanel : MonoBehaviour
     void OnReplayClicked()
     {
         Debug.Log("Replay Button Clicked");
+        AudioManager.Instance.PlaySFX(SoundType.Button);
         Events.GameStartInvoke();
     }
     void OnHomeClicked()
     {
         Debug.Log("Home Button Clicked");
+        AudioManager.Instance.PlaySFX(SoundType.Button);
         Events.ResetGameRequest();
+        Events.ShowMainMenuInvoke();
     }
 
 

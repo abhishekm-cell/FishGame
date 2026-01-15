@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 54d9bf2a5430847b5affe6d144bd32f0, type: 2}
   anim: {fileID: 5627750300724154920}
+  eatEffect: {fileID: 167276, guid: 48b70001f3e22c7429ee06b99087e45e, type: 3}
 --- !u!212 &1863723739940837250
 SpriteRenderer:
   m_ObjectHideFlags: 0

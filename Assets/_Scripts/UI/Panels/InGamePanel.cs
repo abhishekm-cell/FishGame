@@ -38,13 +38,15 @@ public class InGamePanel : MonoBehaviour
     void OnPauseClicked()
     {
         Debug.Log("Pause Button Clicked");
-        Events.GamePausedInvoke();
-
+        AudioManager.Instance.PlaySFX(SoundType.Button);
+        AudioManager.Instance.PauseSFX();
+        Events.ShowGamePauseInvoke();
+        Events.PauseRequest();
     }
 
     private void UpdateScore(int score)
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
     
     public void Show()

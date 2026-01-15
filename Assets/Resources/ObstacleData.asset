@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ObstacleData
   m_EditorClassIdentifier: 
   prefab: {fileID: 6380026559194576264, guid: bba5f1450ceb241fdacc1504a54a3641, type: 3}
+  baitPrefab: {fileID: 7662904001793737363, guid: 94e3353519c8b486eb95f2c6a1a99da9, type: 3}
   SpawnPoint: {x: 21.5, y: 8}
   maxAmplitude: 8
   maxFrequency: 2

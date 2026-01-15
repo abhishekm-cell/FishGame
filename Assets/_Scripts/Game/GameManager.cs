@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System;
-using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,38 +11,37 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Movement playerMovement;
     [SerializeField] private PlayerGrowth playerGrowth;
     [SerializeField] private UIManager uiManager;
+    
 
     private GameStates currentState;
     private int score;
+    private int highScore;
+
 
     void Awake()
     {
-        uiManager.Init(this);
-        
+        //uiManager.Init(this);
+        SetState(GameStates.MainMenu);
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        UpdateHighScore();
     }
 
     void OnEnable()
     {
-        Events.GameInit += GameInit;
-        Events.GameStarted += StartGame;
-        Events.GamePaused += PauseGame;
-
-        // Events.PauseRequested += PauseGame;
+        Events.GameStart += StartGame;
+        Events.PauseRequested += PauseGame;
         Events.ResumeRequested += ResumeGame;
-        Events.GameOverRequested += TriggerGameOver;
+        //Events.GameOverRequested += TriggerGameOver;
         Events.ResetGameRequested += ResetGame;
         Events.ScoreGained += AddScore;
     }
 
     void OnDisable()
     {
-        Events.GameInit -= GameInit;
-        Events.GameStarted -= StartGame;
-        Events.GamePaused -= PauseGame;
-
-        // Events.PauseRequested -= PauseGame;
+        Events.GameStart -= StartGame;
+        Events.PauseRequested -= PauseGame;
         Events.ResumeRequested -= ResumeGame;
-        Events.GameOverRequested -= TriggerGameOver;
+        //Events.GameOverRequested -= TriggerGameOver;
         Events.ResetGameRequested -= ResetGame;
         Events.ScoreGained -= AddScore;
     }
@@ -56,36 +54,31 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameStates.MainMenu:
-                // Time.timeScale = 1f;
+                Time.timeScale = 1f;
+                uiManager.ShowMainMenu();
                 break;
 
             case GameStates.InGame:
-                // Time.timeScale = 1f;
+                Time.timeScale = 1f;
+                uiManager.ShowInGame();
                 break;
 
             case GameStates.GamePause:
-                // Time.timeScale = 0f;
+                Time.timeScale = 0f;
+                uiManager.ShowPause();
                 break;
 
             case GameStates.GameOver:
-                // Time.timeScale = 0f;
+                Time.timeScale = 0f;
+                uiManager.ShowGameOver();
                 break;
         }
     }
 
-    private void GameInit()
-    {
-        SetState(GameStates.MainMenu);
-        // spawnSystem.StopSpawning();
-        // poolManager.DeSpawnAll();
-        // playerMovement.ResetPlayer();
-        // playerGrowth.ResetGrowth();
-    }
     
     private void StartGame()
     {
-        score = 0;
-        Events.UpdateScoreInvoke(score);
+        ResetGame();
         SetState(GameStates.InGame);
     }
 
@@ -110,18 +103,22 @@ public class GameManager : MonoBehaviour
     public void TriggerGameOver()
     {
         SetState(GameStates.GameOver);
+        Events.GameOverRequest();
     }
 
     private void ResetGame()
     {
+        UpdateHighScore();
         score = 0;
         Events.UpdateScoreInvoke(score);
 
-        // spawnSystem.StopSpawning();
-        // poolManager.DeSpawnAll();
+        spawnSystem.StopSpawning();
+        poolManager.DeSpawnAll();
 
         playerMovement.ResetPlayer();
         playerGrowth.ResetGrowth();
+        
+        Debug.Log("Game Reset");
     }
 
     private void AddScore(int amount)
@@ -130,9 +127,20 @@ public class GameManager : MonoBehaviour
         Events.UpdateScoreInvoke(score);
     }
 
+    private void UpdateHighScore()
+    {
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.Save();
+        }
+    }
+
 
     public PlayerGrowth GetPlayerGrowth() => playerGrowth;
     public Movement GetPlayerMovement() => playerMovement;
+    
 }
 
 

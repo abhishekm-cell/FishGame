@@ -21,3 +21,15 @@ public enum GameStates
     GameOver,   // game over screen, game not running
     InfoPanel  // game paused, info panel
 }
+
+public enum SoundType
+{
+    BGM1,
+    BGM2,
+    Reeling,
+    Bite,
+    Eat,
+    Button,
+    Move,
+    Dead,
+}

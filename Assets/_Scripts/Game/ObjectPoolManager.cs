@@ -43,7 +43,6 @@ public class ObjectPoolManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Events.GameInit += GameInit;
         Events.RequestSpawn += HandleSpawn;
         Events.RequestDespawn += HandleDespawn;
         Events.ResetGame += DeSpawnAll;
@@ -51,15 +50,9 @@ public class ObjectPoolManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Events.GameInit -= GameInit;
         Events.RequestSpawn -= HandleSpawn;
         Events.RequestDespawn -= HandleDespawn;
         Events.ResetGame -= DeSpawnAll;
-    }
-
-    void GameInit()
-    {
-        DeSpawnAll();
     }
 
     void HandleSpawn(GameObject prefab, Vector3 pos, Quaternion rot, Action<GameObject> callback)
@@ -93,7 +86,7 @@ public class ObjectPoolManager : MonoBehaviour
         poolDictionary[prefab].Enqueue(instance);
     }
 
-    private void DeSpawnAll()
+    public void DeSpawnAll()
     {
         Debug.Log("Despawning all objects");
         foreach (var pair in poolDictionary)

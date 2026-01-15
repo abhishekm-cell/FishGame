@@ -5,20 +5,20 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // need to add size scale threshold, players starts from 0.75 and grows till 2
-
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float baseMoveSpeed;
-    [SerializeField] private float minY, maxY;
+    [SerializeField] private float minY = -7f;
+    [SerializeField] private float maxY = 7f;
     [SerializeField] private float maxRotation = 25f;
     [SerializeField] private float rotationSmooth = 10f;
     [SerializeField] private Vector2 startPos;
+    
     private float lastEatTime;
     [SerializeField] private float eatAnimCooldown = 0.2f;
-    
     private float targetRotation;
     private Coroutine activeEffect;
-    private float delaydeath;
+    
     
     [Header("Swipe Settings")]
     [SerializeField] private float swipeSensitivity = 0.01f;
@@ -29,8 +29,9 @@ public class Movement : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject eatEffect;
 
-    
+    private Coroutine startReelCoroutine;
 
     private Vector2 startTouchPos;
     private bool isSwiping;
@@ -40,47 +41,27 @@ public class Movement : MonoBehaviour
         baseMoveSpeed = moveSpeed;
         baseSwipeSensitivity = swipeSensitivity;
 
-        Camera camera = Camera.main;
-        float camHalfH = camera.orthographicSize;
-
-        minY = camera.transform.position.y - camHalfH;
-        maxY = camera.transform.position.y + camHalfH;
+        // Y clamp is now fixed at +7 and -7, ignoring camera height
+        minY = -9f;
+        maxY = 9f;
     }
 
     public void SetReference(GameManager gameManager) => this.gameManager = gameManager;
 
     void OnEnable()
     {
-        Events.GameInit += MakeSwipeFalse;
-        Events.GameStarted += MakeSwipeTrue;
-        Events.GamePaused += MakeSwipeFalse;
         Events.ResetGame += ResetPlayer;
     }
 
     void OnDisable()
     {
-        Events.GameInit -= MakeSwipeFalse;
-        Events.GameStarted -= MakeSwipeTrue;
-        Events.GamePaused -= MakeSwipeFalse;
         Events.ResetGame -= ResetPlayer;
     }
 
     void Update()
     {
-        if(!isSwiping) return;
-
         HandleSwipe();
         ApplyRotation();
-    }
-
-    private void MakeSwipeTrue()
-    {
-        isSwiping = true;
-    }
-
-    private void MakeSwipeFalse()
-    {
-        isSwiping = false;
     }
 
     void HandleSwipe()
@@ -158,6 +139,8 @@ public class Movement : MonoBehaviour
             if (Time.time - lastEatTime > eatAnimCooldown)
             {
                 anim.SetTrigger("Eat");
+                AudioManager.Instance.PlaySFX(SoundType.Bite);
+                var effect = Instantiate(eatEffect, transform.position, Quaternion.identity);
                 lastEatTime = Time.time;
             }
         }
@@ -192,7 +175,8 @@ public class Movement : MonoBehaviour
 
     public void StartReel(Transform hook, float reelSpeed)
     {
-        StartCoroutine(ReelToHook(hook , reelSpeed));
+        startReelCoroutine = StartCoroutine(ReelToHook(hook, reelSpeed));
+        
     }
 
     private IEnumerator ReelToHook(Transform hook, float speed)
@@ -233,8 +217,7 @@ public class Movement : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
-    // start coroutine to delay player death
-
+    
     public void ResetPlayer()
     {
         transform.position = startPos;
@@ -249,10 +232,16 @@ public class Movement : MonoBehaviour
         {
             PlayerDie();
             gameManager.TriggerGameOver();
+            if (startReelCoroutine != null)
+            {
+                StopCoroutine(startReelCoroutine);
+                startReelCoroutine = null;
+            }
         }
     }
 
 }
+
 
 
 

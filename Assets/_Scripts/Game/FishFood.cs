@@ -8,6 +8,7 @@ public class FishFood : MonoBehaviour
     private const string playerTag = "Player";
     private GameManager gManager;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject eatEffect;
 
     public void Init(FoodData foodData )
     {
@@ -45,9 +46,11 @@ public class FishFood : MonoBehaviour
             if(!gManager.GetPlayerGrowth().CanEatFood(data))
             {
                 Debug.Log("Player too small to eat this fish");
+                var effect = Instantiate(eatEffect, transform.position, Quaternion.identity);
                 anim.SetTrigger("Eat");
+                AudioManager.Instance.PlaySFX(SoundType.Eat);  
                 gManager.GetPlayerMovement().PlayerDie();
-                gManager.TriggerGameOver();
+                StartCoroutine(DelayGameOver());
                 //Events.ShowGameOverInvoke();
                 return;
             }
@@ -76,18 +79,9 @@ public class FishFood : MonoBehaviour
         yield return new WaitForSeconds(data.deathDelay);
         Events.RequestDespawn?.Invoke(gameObject, data.prefab);
     }
-    
-
-
-    // public void OnSpawn()
-    // {
-    //     Init(data);
-    // }
-
-    // public void OnDespawn()
-    // {
-    //     Destroy(gameObject);
-    // }
-
-    
+    private IEnumerator DelayGameOver()
+    {
+        yield return new WaitForSeconds(data.deathDelay);
+        gManager.TriggerGameOver();
+    }
 }

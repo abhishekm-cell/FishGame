@@ -7,57 +7,72 @@ public class UIManager : MonoBehaviour
     [SerializeField] private InGamePanel inGame;
     [SerializeField] private GameOverPanel gameOver;
     [SerializeField] private GamePausePanel pause;
+    [SerializeField] private InfoPanel info;
     //[SerializeField] private GameManager gManager;
+
+    void OnEnable()
+    {
+        Events.MainMenuPanelShow += ShowMainMenu;
+        Events.UpdateScore += UpdateScoreInPanel;
+        Events.InfoPanelRequested += ShowInfoPanel;
+
+    }
+
+    
+
+    void OnDisable()
+    {
+        Events.MainMenuPanelShow -= ShowMainMenu;
+        Events.UpdateScore -= UpdateScoreInPanel;
+        Events.InfoPanelRequested -= ShowInfoPanel;
+    }
 
     public void Init(GameManager gm)
     {
         //gManager = gm;
         ShowMainMenu();
-        Events.GameInitInvoke();
     }
 
-    void OnEnable()
-    {
-        Events.GameInit += ShowMainMenu;
-        Events.GameStarted += ShowInGame;
-        Events.GamePaused += ShowPause; 
-    }
-
-    void OnDisable()
-    {
-        Events.GameInit -= ShowMainMenu;
-        Events.GameStarted -= ShowInGame;
-        Events.GamePaused -= ShowPause;
-    }
-
-    private void ShowMainMenu()
+    public void ShowMainMenu()
     {
         mainMenu.Show();
         inGame.Hide();
         gameOver.Hide();
         pause.Hide();
+        info.Hide();
         
     }
 
-    private void ShowInGame()
+    public void ShowInGame()
     {
         mainMenu.Hide();
         inGame.Show();
         gameOver.Hide();
         pause.Hide();
+        info.Hide();
+
     }
 
-    private void ShowGameOver()
+    public void ShowGameOver()
     {
         mainMenu.Hide();
-        inGame.Hide();
+        inGame.Show();
         gameOver.Show();
         pause.Hide();
+        info.Hide();
     }
 
-    private void ShowPause()
+    public void ShowPause()
     {
         pause.Show();
+    }
+    public void ShowInfoPanel()
+    {
+        info.Show();
+    }
+    private void UpdateScoreInPanel(int CurrentScore)
+    {
+        pause.UpdateCurrentScore(CurrentScore);
     }
 }    
 
