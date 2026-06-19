@@ -278,7 +278,7 @@ Transform:
   - {fileID: 1179174402}
   - {fileID: 87661637}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40481333
 GameObject:
@@ -1522,7 +1522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 260950615}
   - component: {fileID: 260950616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Underwater background gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1606,7 +1606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300064232}
   - component: {fileID: 300064233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Water refraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1689,7 +1689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314926610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Water Gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1840,7 +1840,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419659639
 GameObject:
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
+  m_CameraType: 1
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -2153,18 +2153,18 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 90
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
@@ -2183,7 +2183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -2752,7 +2752,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &656744977
 GameObject:
@@ -4114,7 +4114,7 @@ Transform:
   - {fileID: 611398916}
   - {fileID: 800203210}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966010217
 GameObject:
@@ -4576,7 +4576,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1043973646
 GameObject:
@@ -4719,7 +4719,7 @@ Transform:
   m_Children:
   - {fileID: 1307780140}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047842791
 GameObject:
@@ -4787,7 +4787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058344363}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4802,14 +4802,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058344362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 314926610}
   - {fileID: 1493915108}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1067499567
 GameObject:
@@ -4995,7 +4995,7 @@ Transform:
   - {fileID: 229973208}
   - {fileID: 1498077697}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103759103
 GameObject:
@@ -5535,7 +5535,7 @@ Transform:
   - {fileID: 908111377}
   - {fileID: 852238419}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324451582
 GameObject:
@@ -6039,6 +6039,7 @@ MonoBehaviour:
   obstacleData: {fileID: 11400000, guid: 925cca2d66a23486a96827d39cf73f35, type: 2}
   maxFoodOnScreen: 10
   maxObstaclesOnScreen: 4
+  difficultyTiers: []
   gManager: {fileID: 176933038}
 --- !u!1 &1445680084
 GameObject:
@@ -6050,7 +6051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445680085}
   - component: {fileID: 1445680086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Underwater background gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6134,7 +6135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450760577}
   - component: {fileID: 1450760578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Underwater gradient (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6484,7 +6485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1493915108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7619,7 +7620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1757613075}
   - component: {fileID: 1757613076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Underwater background gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7707,13 +7708,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836457645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1836457645
 Transform:
   m_ObjectHideFlags: 0
@@ -7729,7 +7730,7 @@ Transform:
   - {fileID: 1757613075}
   - {fileID: 1445680085}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846420859
 GameObject:
@@ -7987,7 +7988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885092600}
   - component: {fileID: 1885092601}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Underwater gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8071,7 +8072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899689748}
   - component: {fileID: 1899689749}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Underwater background gradient (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8451,7 +8452,7 @@ Transform:
   m_Children:
   - {fileID: 597201116}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1987786215
 Rigidbody2D:
@@ -8486,7 +8487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b7f0ce188884e9fbda44a3c3bcf23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 4
   baseMoveSpeed: 0
   minY: 0
   maxY: 0
@@ -8710,6 +8711,125 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replayButton: {fileID: 842761970}
   homeButton: {fileID: 536749648}
+--- !u!1 &2001700316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001700320}
+  - component: {fileID: 2001700319}
+  - component: {fileID: 2001700318}
+  - component: {fileID: 2001700317}
+  m_Layer: 0
+  m_Name: BG_Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2001700317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001700316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras:
+  - {fileID: 519420031}
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!81 &2001700318
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001700316}
+  m_Enabled: 0
+--- !u!20 &2001700319
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001700316}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &2001700320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001700316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.558483, y: -17.24251, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016330620
 GameObject:
   m_ObjectHideFlags: 0

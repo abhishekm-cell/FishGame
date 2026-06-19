@@ -7,7 +7,7 @@ public class GamePausePanel : MonoBehaviour
 {   
     [Header("Buttons")]
     [SerializeField] private Button resumeButton;
-    [SerializeField] private Button homeButton;// back to main menu
+    [SerializeField] private Button homeButton;
     [Header("Score UI")]    
     [SerializeField] private TextMeshProUGUI currentScoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;

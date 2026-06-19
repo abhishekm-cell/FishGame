@@ -17,22 +17,18 @@ public class InGamePanel : MonoBehaviour
     void OnEnable()
     {
         pauseButton.onClick.AddListener(OnPauseClicked);
-
         Events.UpdateScore += UpdateScore;
     }
 
     void OnDisable()
     {
         pauseButton.onClick.RemoveListener(OnPauseClicked);
-
         Events.UpdateScore -= UpdateScore;
     }
 
     public void SetReferences(GameManager gameManager)
     {
         gManager = gameManager;
-        //UpdateScore(0);
-        
     }
 
     void OnPauseClicked()

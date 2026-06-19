@@ -18,8 +18,6 @@ public class UIManager : MonoBehaviour
 
     }
 
-    
-
     void OnDisable()
     {
         Events.MainMenuPanelShow -= ShowMainMenu;
@@ -29,7 +27,6 @@ public class UIManager : MonoBehaviour
 
     public void Init(GameManager gm)
     {
-        //gManager = gm;
         ShowMainMenu();
     }
 
@@ -39,8 +36,7 @@ public class UIManager : MonoBehaviour
         inGame.Hide();
         gameOver.Hide();
         pause.Hide();
-        info.Hide();
-        
+        info.Hide(); 
     }
 
     public void ShowInGame()
@@ -50,7 +46,6 @@ public class UIManager : MonoBehaviour
         gameOver.Hide();
         pause.Hide();
         info.Hide();
-
     }
 
     public void ShowGameOver()

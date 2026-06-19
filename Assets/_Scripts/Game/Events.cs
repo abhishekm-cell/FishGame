@@ -50,6 +50,4 @@ public static class Events
     public static event Action ResetGame;
     public static void ResetGameInvoke() => ResetGame?.Invoke();
 
-
-    
 }
