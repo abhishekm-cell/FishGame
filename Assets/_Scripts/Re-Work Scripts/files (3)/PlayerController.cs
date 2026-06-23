@@ -51,9 +51,11 @@ public class PlayerController : MonoBehaviour
 
         _input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         
-        if (_input.x >= 0)
+        Debug.Log($"here is what YOURE PRESSING{_input}");
+
+        if (_input.x != 0)
         {
-            _sr.flipX = _input.x == 1;
+            _sr.flipX = _input.x == -1;
         }
             
     }
@@ -111,7 +113,6 @@ public class PlayerController : MonoBehaviour
     {
         var tier = fishData.GetTier(CurrentSize);
         _col.radius = tier.colliderRadius;
-        _sr.sprite = tier.sprite;
         transform.localScale = Vector3.one * tier.visualScale;
     }
 }
