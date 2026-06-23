@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf6ef024a169489d8b60943d827abaf, type: 3}
+  m_Name: FishData
+  m_EditorClassIdentifier: 
+  tiers:
+  - sizeValue: 1
+    speed: 2
+    colliderRadius: 0.5
+    sprite: {fileID: 713970491, guid: b4e6a6e5cd8df439f8df825d8972b0d5, type: 3}
+    visualScale: 0.5
+  - sizeValue: 2
+    speed: 3
+    colliderRadius: 0.8
+    sprite: {fileID: 1187453296, guid: 7a0d143872cbc4bfbbdd64dd12fc9c14, type: 3}
+    visualScale: 0.7
+  - sizeValue: 3
+    speed: 4
+    colliderRadius: 1
+    sprite: {fileID: 1675301850, guid: 888cb1384a47e4b3ca3ecd030e77c417, type: 3}
+    visualScale: 1
+  - sizeValue: 6
+    speed: 2
+    colliderRadius: 1
+    sprite: {fileID: -1084126760, guid: f78c5ce24cbab409f81ecab89dc029f1, type: 3}
+    visualScale: 1.2

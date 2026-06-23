@@ -45,10 +45,10 @@ public class MainMenuPanel : MonoBehaviour
     void StartButtonClicked()//playButton
     {
         Debug.Log("Start Button Clicked");
-        AudioManager.Instance.PlaySFX(SoundType.Button);
+//        AudioManager.Instance.PlaySFX(SoundType.Button);
         Events.ResetGameRequest();
         Events.GameStartInvoke();
-        AudioManager.Instance.PlayMusic(SoundType.BGM2);
+        //AudioManager.Instance.PlayMusic(SoundType.BGM2);
         Events.ShowInGameInvoke();
     }
 
@@ -56,7 +56,7 @@ public class MainMenuPanel : MonoBehaviour
     {
         Debug.Log("Info Button Clicked");
         Events.InfoPanelRequest();
-        AudioManager.Instance.PlaySFX(SoundType.Button);
+        //AudioManager.Instance.PlaySFX(SoundType.Button);
     }
 
     void QuitButtonClicked()
@@ -67,7 +67,7 @@ public class MainMenuPanel : MonoBehaviour
 
     private void MusicOn()
     {
-        Debug.Log("Music on");
+        
         AudioManager.Instance.SetMusic(false);
         musicIconOff.SetActive(true);
         musicIconOn.SetActive(false);
@@ -75,14 +75,14 @@ public class MainMenuPanel : MonoBehaviour
 
     private void MusicOff()
     {
-        Debug.Log("Music off");
+        
         AudioManager.Instance.SetMusic(true);
         musicIconOn.SetActive(true);
         musicIconOff.SetActive(false);
     }
     private void SFXOn()
     {
-        Debug.Log("SFX on");
+        
         AudioManager.Instance.StopSfx();
         SFXIconOff.gameObject.SetActive(true);
         SFXIconOn.gameObject.SetActive(false);
@@ -90,7 +90,7 @@ public class MainMenuPanel : MonoBehaviour
 
     private void SFXOff()
     {
-        Debug.Log("SFX off");
+        
         AudioManager.Instance.PlaySFX();
         SFXIconOn.gameObject.SetActive(true);
         SFXIconOff.gameObject.SetActive(false);
