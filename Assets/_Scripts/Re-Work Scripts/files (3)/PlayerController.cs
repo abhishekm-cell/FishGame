@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
         _input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         
-        Debug.Log($"here is what YOURE PRESSING{_input}");
+        //Debug.Log($"here is what YOURE PRESSING{_input}");
 
         if (_input.x != 0)
         {
@@ -89,7 +89,17 @@ public class PlayerController : MonoBehaviour
             }
             else if (fish.SizeValue > CurrentSize)
             {
-                EventBus.Publish(new OnPlayerDied { reason = "Fish" });
+                // Debug: log the fish that ate the player
+                var tier = fishData.GetTier(fish.SizeValue);
+                Debug.Log($"[PlayerController] Eaten by fish | " +
+                        $"SizeValue: {fish.SizeValue} | " +
+                        $"Speed: {tier.speed} | " +
+                        $"ColliderRadius: {tier.colliderRadius} | " +
+                        $"VisualScale: {tier.visualScale} | " +
+                        $"Sprite: {(tier.sprite != null ? tier.sprite.name : "null")} | " +
+                        $"PlayerSize at death: {CurrentSize}");
+
+                EventBus.Publish(new OnPlayerDied { reason = "fish" });
             }
             // Same size — no effect
         }

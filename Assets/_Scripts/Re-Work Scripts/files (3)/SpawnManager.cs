@@ -112,8 +112,7 @@ public class SpawnManager : MonoBehaviour
         if (roll < Mathf.Lerp(0.50f, 0.15f, t)) return 1;
         if (roll < Mathf.Lerp(0.80f, 0.40f, t)) return 2;
         if (roll < Mathf.Lerp(0.93f, 0.65f, t)) return 3;
-        if (roll < Mathf.Lerp(0.98f, 0.85f, t)) return 4;
-        return 5;
+        return 4;
     }
 
     private float CurrentFishInterval()

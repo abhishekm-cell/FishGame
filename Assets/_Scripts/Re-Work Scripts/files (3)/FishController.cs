@@ -17,16 +17,16 @@ public class FishController : MonoBehaviour
  
     void Awake()
     {
-        _rb              = GetComponent<Rigidbody2D>();
-        _sr              = GetComponent<SpriteRenderer>();
-        _col             = GetComponent<CircleCollider2D>();
+        _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
+        _col = GetComponent<CircleCollider2D>();
         _rb.gravityScale = 0f;
-        _rb.bodyType     = RigidbodyType2D.Kinematic;
+        _rb.bodyType = RigidbodyType2D.Kinematic;
  
         // Resolved in Awake so they're ready before Init() is called on prewarm objects.
         // Start() never fires on pooled objects that are inactive at scene load.
         _gameManager = ServiceLocator.Instance.Get<GamesManager>();
-        _pool        = ServiceLocator.Instance.Get<ObjectPool>();
+        _pool = ServiceLocator.Instance.Get<ObjectPool>();
     }
  
     /// <summary>Called by SpawnManager each time this fish is pulled from the pool.</summary>
@@ -38,13 +38,13 @@ public class FishController : MonoBehaviour
         var tier = fishData.GetTier(sizeValue);
         _speed   = tier.speed;
  
-        float startX          = direction == 1 ? -10f : 10f;
-        transform.position    = new Vector3(startX, yWorld, 0f);
+        float startX = direction == 1 ? -10f : 10f;
+        transform.position = new Vector3(startX, yWorld, 0f);
         transform.localScale  = Vector3.one * tier.visualScale;
  
-        _sr.sprite     = tier.sprite;
-        _sr.flipX      = direction < 0;
-        _col.radius    = tier.colliderRadius;
+        _sr.sprite = tier.sprite;
+        _sr.flipX = direction > 0;
+        _col.radius = tier.colliderRadius;
  
         gameObject.SetActive(true);
     }
