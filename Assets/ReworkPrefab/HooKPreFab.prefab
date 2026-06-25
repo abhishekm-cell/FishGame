@@ -95,10 +95,10 @@ GameObject:
   - component: {fileID: 4887389662608425232}
   - component: {fileID: 4887389662608425235}
   - component: {fileID: 4887389662608425234}
-  - component: {fileID: 4887389662608425233}
+  - component: {fileID: 9034007186889029510}
   m_Layer: 0
   m_Name: HooKPreFab
-  m_TagString: Untagged
+  m_TagString: Hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descendSpeed: 3
   ascendSpeed: 4
---- !u!893571522 &4887389662608425233
-CustomCollider2D:
+--- !u!58 &9034007186889029510
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -195,10 +195,9 @@ CustomCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_CustomShapes:
-    m_Shapes: []
-    m_Vertices: []
+  m_Offset: {x: 0, y: -0.2}
+  serializedVersion: 2
+  m_Radius: 0.6

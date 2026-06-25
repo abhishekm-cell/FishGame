@@ -7,13 +7,14 @@ public class FishController : MonoBehaviour
  
     public int SizeValue { get; private set; }
  
-    private int              _direction;
-    private float            _speed;
-    private GamesManager      _gameManager;
-    private ObjectPool       _pool;
-    private Rigidbody2D      _rb;
-    private SpriteRenderer   _sr;
+    private int _direction;
+    private float _speed;
+    private GamesManager _gameManager;
+    private ObjectPool _pool;
+    private Rigidbody2D _rb;
+    private SpriteRenderer _sr;
     private CircleCollider2D _col;
+    public event System.Action OnReturnedToPool;
  
     void Awake()
     {
@@ -60,9 +61,12 @@ public class FishController : MonoBehaviour
             ReturnToPool();
     }
  
+    
+
     public void ReturnToPool()
     {
-        gameObject.SetActive(false);
-        _pool?.ReturnFish(gameObject);
+        OnReturnedToPool?.Invoke();
+        OnReturnedToPool = null; // clear to avoid stale subs on re-pool
+        _pool.ReturnFish(gameObject);
     }
 }

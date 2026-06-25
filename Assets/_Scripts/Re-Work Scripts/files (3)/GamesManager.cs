@@ -18,20 +18,20 @@ public class GamesManager : MonoBehaviour
     public void Inject(SpawnManager spawnManager, PlayerController player)
     {
         _spawnManager = spawnManager;
-        _player       = player;
+        _player = player;
     }
 
     void OnEnable()
     {
         EventBus.Subscribe<OnPlayerDied>(HandlePlayerDied);
-        EventBus.Subscribe<OnHookCaught>(HandleHookCaught);
+        //EventBus.Subscribe<OnHookCaught>(HandleHookCaught);
         EventBus.Subscribe<OnPlayerAte>(HandlePlayerAte);
     }
 
     void OnDisable()
     {
         EventBus.Unsubscribe<OnPlayerDied>(HandlePlayerDied);
-        EventBus.Unsubscribe<OnHookCaught>(HandleHookCaught);
+        //EventBus.Unsubscribe<OnHookCaught>(HandleHookCaught);
         EventBus.Unsubscribe<OnPlayerAte>(HandlePlayerAte);
     }
 
@@ -59,7 +59,7 @@ public class GamesManager : MonoBehaviour
     }
 
     private void HandlePlayerDied(OnPlayerDied evt) => TriggerGameOver(evt.reason);
-    private void HandleHookCaught(OnHookCaught _)   => TriggerGameOver("hook");
+    //private void HandleHookCaught(OnHookCaught _)   => TriggerGameOver("hook");
 
     private void TriggerGameOver(string reason)
     {

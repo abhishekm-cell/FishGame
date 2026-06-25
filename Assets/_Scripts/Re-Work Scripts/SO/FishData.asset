@@ -25,11 +25,11 @@ MonoBehaviour:
     visualScale: 0.7
   - sizeValue: 3
     speed: 4
-    colliderRadius: 1
+    colliderRadius: 0.8
     sprite: {fileID: 1675301850, guid: 888cb1384a47e4b3ca3ecd030e77c417, type: 3}
     visualScale: 1
   - sizeValue: 4
     speed: 2
-    colliderRadius: 1
+    colliderRadius: 0.9
     sprite: {fileID: -1084126760, guid: f78c5ce24cbab409f81ecab89dc029f1, type: 3}
     visualScale: 1.2

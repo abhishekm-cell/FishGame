@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private CircleCollider2D _col;
     private SpriteRenderer _sr;
     private Vector2 _input;
+    private bool _isReeling = false;
+    private Transform _hookTransform;
 
     // Touch tracking
     private int _touchFingerId = -1;
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
         _col = GetComponent<CircleCollider2D>();
         _sr  = GetComponent<SpriteRenderer>();
         _rb.gravityScale = 0f;
+        ServiceLocator.Instance.Register<PlayerController>(this);
     }
 
     void Start()
@@ -49,6 +52,16 @@ public class PlayerController : MonoBehaviour
         }
 
         _gameManager = ServiceLocator.Instance.Get<GamesManager>();
+    }
+
+    void OnEnable()
+    {
+        EventBus.Subscribe<OnHookCaught>(OnHookCaught);
+    }
+
+    void OnDisable()
+    {
+        EventBus.Unsubscribe<OnHookCaught>(OnHookCaught);
     }
 
     void Update()
@@ -71,6 +84,12 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (_gameManager.State != GamesManager.GameState.Playing) return;
+
+        if (_isReeling && _hookTransform != null)
+        {
+            _rb.MovePosition(Vector2.Lerp(_rb.position, _hookTransform.position, 15f * Time.fixedDeltaTime));
+            return;
+        }
 
         var next = _rb.position + _input * moveSpeed * Time.fixedDeltaTime;
         next.x = Mathf.Clamp(next.x, xMin, xMax);
@@ -186,7 +205,9 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = Vector3.zero;
         CurrentSize = 1;
-        _touchFingerId = -1;   // clear any stale touch on restart
+        _touchFingerId = -1;   
+        _isReeling = false;
+        _hookTransform = null;
         ApplySize();
     }
 
@@ -201,6 +222,12 @@ public class PlayerController : MonoBehaviour
         var tier = fishData.GetTier(CurrentSize);
         //_col.radius = tier.colliderRadius;
         transform.localScale = Vector3.one * tier.visualScale;
+    }
+
+    private void OnHookCaught(OnHookCaught e)
+    {
+        _isReeling = true;
+        _hookTransform = e.hookTransform; 
     }
 
 

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -18,12 +19,17 @@ public class SpawnManager : MonoBehaviour
 
     [Header("Camera for world bounds")]
     [SerializeField] private Camera gameCam;
+    [Header("Spawn limits")]
+    [SerializeField] private int maxFishPerLane = 2;
+
+
+    private Dictionary <int,int> _fishCountPerLane = new();
 
     private ObjectPool _pool;
     private Coroutine  _fishRoutine;
     private Coroutine  _hookRoutine;
-    private float      _elapsed;
-    private bool       _running;
+    private float _elapsed;
+    private bool _running;
 
     void Awake()
     {
@@ -34,6 +40,7 @@ public class SpawnManager : MonoBehaviour
     {
         _elapsed      = 0f;
         _running      = true;
+        _fishCountPerLane.Clear();
         _fishRoutine  = StartCoroutine(SpawnFishLoop());
         _hookRoutine  = StartCoroutine(SpawnHookLoop());
     }
@@ -55,12 +62,53 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnFishLoop()
     {
+        var fishLanes = System.Array.FindAll(laneConfig.lanes,
+        l => l.type == LaneConfigSO.LaneType.FishLeft || l.type == LaneConfigSO.LaneType.FishRight);
+
+        for (int i = 0; i < fishLanes.Length; i++)
+        {
+            int laneIndex = System.Array.IndexOf(laneConfig.lanes, fishLanes[i]);
+            _fishCountPerLane[laneIndex] = 0;
+            float offset = (fishIntervalStart / fishLanes.Length) * i;
+            StartCoroutine(SpawnFishLaneLoop(fishLanes[i], laneIndex, offset));
+        }
+
+        while (_running) yield return null;
+    }
+
+    private IEnumerator SpawnFishLaneLoop(LaneConfigSO.Lane lane, int laneIndex, float initialDelay)
+    {
+        yield return new WaitForSeconds(initialDelay);
         while (_running)
         {
-            SpawnFish();
+            if (_fishCountPerLane.GetValueOrDefault(laneIndex, 0) < maxFishPerLane)
+            {
+                SpawnFishOnLane(lane, laneIndex);
+            }
             yield return new WaitForSeconds(CurrentFishInterval());
         }
     }
+
+    private void SpawnFishOnLane(LaneConfigSO.Lane lane, int laneIndex)
+    {
+        int   direction = lane.type == LaneConfigSO.LaneType.FishLeft ? -1 : 1;
+        int   sizeValue = WeightedRandomSize();
+        float worldY    = NormYToWorld(lane.normalizedY);
+
+        var obj = _pool.GetFish();
+        var fc  = obj.GetComponent<FishController>();
+        _fishCountPerLane[laneIndex]++;
+        fc.Init(sizeValue, direction, worldY);
+
+        // Decrement when fish exits/returns to pool
+        fc.OnReturnedToPool += () =>
+        {
+            if (_fishCountPerLane.ContainsKey(laneIndex))
+                _fishCountPerLane[laneIndex]--;
+        };
+    }
+
+
 
     private IEnumerator SpawnHookLoop()
     {
