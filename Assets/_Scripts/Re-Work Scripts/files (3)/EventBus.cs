@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
+
 
 public static class EventBus
 {
@@ -32,10 +32,4 @@ public static class EventBus
     public static void Clear() => _listeners.Clear();
 }
 
-// ── Events ────────────────────────────────────────────────────────────
-public struct OnPlayerAte    { public int eatenFishSize; public int newPlayerSize; }
-public struct OnPlayerDied   { public string reason; }  // "fish" or "hook"
-public struct OnHookCaught   { public Transform hookTransform; }
-public struct OnScoreChanged { public int score; }
-public struct OnGameStarted  { }
-public struct OnGameOver     { public string reason; public int finalScore; }
+

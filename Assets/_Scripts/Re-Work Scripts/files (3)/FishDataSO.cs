@@ -15,6 +15,7 @@ public class FishDataSO : ScriptableObject
     }
 
     public SizeTier[] tiers;
+    public int TierCount => tiers[tiers.Length - 1].sizeValue;
 
     public SizeTier GetTier(int sizeValue)
     {

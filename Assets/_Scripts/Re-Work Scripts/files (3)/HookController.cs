@@ -4,24 +4,21 @@ public class HookController : MonoBehaviour
 {
     [SerializeField] private float descendSpeed = 3f;
     [SerializeField] private float ascendSpeed  = 4f;
-    [SerializeField] private float reelSpeed    = 5f; // match ObstacleData.reelSpeed
+    [SerializeField] private float reelSpeed    = 5f; 
 
     private float _topY;
     private float _bottomY;
     private GamesManager  _gameManager;
     private ObjectPool _pool;
-    private PlayerController _playerMovement; // cache on Init
+    private PlayerController _playerMovement; 
 
     private bool _isReeling = false;
-
-    private enum Phase { Descending, Ascending }
     private Phase _phase;
 
     void Awake()
     {
         _gameManager = ServiceLocator.Instance.Get<GamesManager>();
         _pool = ServiceLocator.Instance.Get<ObjectPool>();
-        //_playerMovement = ServiceLocator.Instance.Get<PlayerController>(); // or however you resolve it
     }
 
     public void Init(float startX, float topY, float bottomY)
@@ -79,7 +76,7 @@ public class HookController : MonoBehaviour
         {
             _isReeling = true;
             EventBus.Publish(new OnHookCaught { hookTransform = transform });
-            // remove any OnPlayerDied publish from here
+            
         }
     }
 
