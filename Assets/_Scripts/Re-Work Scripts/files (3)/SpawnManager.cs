@@ -91,12 +91,11 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnHook()
     {
-        var hookLanes = System.Array.FindAll(laneConfig.lanes,
-            l => l.type == LaneConfigSO.LaneType.HookDown);
+        var hookLanes = System.Array.FindAll(laneConfig.lanes,l => l.type == LaneConfigSO.LaneType.HookDown);
 
         if (hookLanes.Length == 0) return;
 
-        var   lane    = hookLanes[Random.Range(0, hookLanes.Length)];
+        var lane = hookLanes[Random.Range(0, hookLanes.Length)];
         float worldX  = NormXToWorld(lane.normalizedX);
         float topY    = gameCam.orthographicSize + 1f;
         float bottomY = NormYToWorld(lane.hookMaxDepth);
@@ -107,7 +106,7 @@ public class SpawnManager : MonoBehaviour
 
     private int WeightedRandomSize()
     {
-        float t    = Mathf.Clamp01(_elapsed / (difficultyRampTime * 2f));
+        float t = Mathf.Clamp01(_elapsed / (difficultyRampTime * 2f));
         float roll = Random.value;
         if (roll < Mathf.Lerp(0.50f, 0.15f, t)) return 1;
         if (roll < Mathf.Lerp(0.80f, 0.40f, t)) return 2;
@@ -137,4 +136,106 @@ public class SpawnManager : MonoBehaviour
     {
         if (_running) _elapsed += Time.deltaTime;
     }
+
+
+
+
+    #region Visual Lane Display
+
+    #if UNITY_EDITOR
+private void OnDrawGizmos()
+{
+    if (laneConfig == null || gameCam == null) return;
+
+    foreach (var lane in laneConfig.lanes)
+    {
+        switch (lane.type)
+        {
+            case LaneConfigSO.LaneType.FishLeft:
+            case LaneConfigSO.LaneType.FishRight:
+                DrawFishLaneGizmo(lane);
+                break;
+            case LaneConfigSO.LaneType.HookDown:
+                DrawHookLaneGizmo(lane);
+                break;
+        }
+    }
+}
+
+private void DrawFishLaneGizmo(LaneConfigSO.Lane lane)
+{
+    bool isLeft = lane.type == LaneConfigSO.LaneType.FishLeft;
+    Color color = isLeft ? new Color(0.2f, 0.6f, 1f, 0.85f) : new Color(0.2f, 1f, 0.6f, 0.85f);
+
+    float y       = NormYToWorld(lane.normalizedY);
+    float halfW   = gameCam.orthographicSize * gameCam.aspect;
+    float leftX   = gameCam.transform.position.x - halfW;
+    float rightX  = gameCam.transform.position.x + halfW;
+
+    // Lane line
+    Gizmos.color = color;
+    Gizmos.DrawLine(new Vector3(leftX, y), new Vector3(rightX, y));
+
+    // Direction arrow
+    float arrowX     = isLeft ? rightX : leftX;
+    float arrowDirX  = isLeft ? -1f : 1f;
+    Vector3 origin   = new Vector3(arrowX, y);
+    Vector3 tip      = origin + new Vector3(arrowDirX * 1.5f, 0f);
+    Vector3 headUp   = origin + new Vector3(arrowDirX * 0.8f,  0.3f);
+    Vector3 headDown = origin + new Vector3(arrowDirX * 0.8f, -0.3f);
+
+    Gizmos.DrawLine(origin, tip);
+    Gizmos.DrawLine(tip, headUp);
+    Gizmos.DrawLine(tip, headDown);
+
+    // Spawn point sphere
+    Gizmos.DrawSphere(origin, 0.12f);
+
+#if UNITY_EDITOR
+    UnityEditor.Handles.color = color;
+    UnityEditor.Handles.Label(
+        new Vector3(arrowX + arrowDirX * 0.15f, y + 0.25f),
+        lane.name
+    );
+#endif
+}
+
+private void DrawHookLaneGizmo(LaneConfigSO.Lane lane)
+{
+    Color color = new Color(1f, 0.45f, 0.2f, 0.85f);
+    Gizmos.color = color;
+
+    float x       = NormXToWorld(lane.normalizedX);
+    float topY    = gameCam.transform.position.y + gameCam.orthographicSize + 1f;
+    float bottomY = NormYToWorld(lane.hookMaxDepth);
+
+    Vector3 top    = new Vector3(x, topY);
+    Vector3 bottom = new Vector3(x, bottomY);
+
+    // Drop line
+    Gizmos.DrawLine(top, bottom);
+
+    // Depth limit crossbar
+    Gizmos.DrawLine(new Vector3(x - 0.3f, bottomY), new Vector3(x + 0.3f, bottomY));
+
+    // Spawn sphere at top
+    Gizmos.DrawSphere(top, 0.12f);
+
+    // Arrow pointing down
+    Vector3 arrowTip  = bottom + new Vector3(0f, 0.5f);
+    Vector3 headLeft  = arrowTip + new Vector3(-0.25f, 0.4f);
+    Vector3 headRight = arrowTip + new Vector3( 0.25f, 0.4f);
+
+    Gizmos.DrawLine(arrowTip, headLeft);
+    Gizmos.DrawLine(arrowTip, headRight);
+
+#if UNITY_EDITOR
+    UnityEditor.Handles.color = color;
+    UnityEditor.Handles.Label(new Vector3(x + 0.15f, topY - 0.3f), lane.name);
+    UnityEditor.Handles.Label(new Vector3(x + 0.15f, bottomY - 0.3f), $"depth {lane.hookMaxDepth:F2}");
+#endif
+}
+#endif
+
+#endregion
 }

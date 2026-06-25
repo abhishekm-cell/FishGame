@@ -8,12 +8,16 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float maxRotation = 25f;
 
     [Header("Bounds — match your camera ortho size")]
     [SerializeField] private float xMin = -8f;
     [SerializeField] private float xMax =  8f;
     [SerializeField] private float yMin = -5f;
     [SerializeField] private float yMax =  5f;
+
+    // Minimum drag distance (in pixels) before touch counts as directional input
+    [SerializeField] private float touchDeadzone = 10f;
 
     public int CurrentSize { get; private set; } = 1;
 
@@ -22,6 +26,10 @@ public class PlayerController : MonoBehaviour
     private CircleCollider2D _col;
     private SpriteRenderer _sr;
     private Vector2 _input;
+
+    // Touch tracking
+    private int _touchFingerId = -1;
+    private Vector2 _touchStartPos;
 
     void Awake()
     {
@@ -41,23 +49,23 @@ public class PlayerController : MonoBehaviour
         }
 
         _gameManager = ServiceLocator.Instance.Get<GamesManager>();
-
-        
     }
 
     void Update()
     {
         if (_gameManager.State != GamesManager.GameState.Playing) return;
 
-        _input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        
-        //Debug.Log($"here is what YOURE PRESSING{_input}");
+        // --- Keyboard input (unchanged) ---
+        Vector2 keyInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
+        // --- Touch input ---
+        Vector2 touchInput = ReadTouchInput();
+
+        // Touch takes priority when active; fall back to keyboard
+        _input = touchInput != Vector2.zero ? touchInput : keyInput;
 
         if (_input.x != 0)
-        {
-            _sr.flipX = _input.x == -1;
-        }
-            
+            _sr.flipX = _input.x < 0f;
     }
 
     void FixedUpdate()
@@ -68,6 +76,82 @@ public class PlayerController : MonoBehaviour
         next.x = Mathf.Clamp(next.x, xMin, xMax);
         next.y = Mathf.Clamp(next.y, yMin, yMax);
         _rb.MovePosition(next);
+
+        // Rotate to face movement direction, clamped to ±maxRotation degrees
+        if (_input != Vector2.zero)
+        {
+            // _input.x is already flipped-aware via flipX, so use raw Y and absolute X
+            // Tilt up when moving up, tilt down when moving down
+            float targetAngle = _input.y * 80f;
+
+            // If sprite is flipped (moving left), invert the tilt so it still makes sense visually
+            if (_sr.flipX) targetAngle = -targetAngle;
+
+            float smoothAngle = Mathf.LerpAngle(_rb.rotation, targetAngle, 10f * Time.fixedDeltaTime
+            );
+            _rb.SetRotation(smoothAngle);
+        }
+        else
+        {
+            // Return to flat when idle
+            float smoothAngle = Mathf.LerpAngle(_rb.rotation, 0f, 8f * Time.fixedDeltaTime);
+            _rb.SetRotation(smoothAngle);
+        }
+    }
+
+    /// <summary>
+    /// Tracks a single finger. Returns a normalised 8-direction vector,
+    /// or Vector2.zero when no touch is active / within the deadzone.
+    /// </summary>
+    private Vector2 ReadTouchInput()
+    {
+        // Register a new finger if none is tracked
+        if (_touchFingerId == -1)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch t = Input.GetTouch(i);
+                if (t.phase == TouchPhase.Began)
+                {
+                    _touchFingerId = t.fingerId;
+                    _touchStartPos = t.position;
+                    break;
+                }
+            }
+        }
+
+        if (_touchFingerId == -1) return Vector2.zero;
+
+        // Find the tracked finger among current touches
+        Touch? tracked = null;
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            if (Input.GetTouch(i).fingerId == _touchFingerId)
+            {
+                tracked = Input.GetTouch(i);
+                break;
+            }
+        }
+
+        // Finger lifted or lost — reset
+        if (!tracked.HasValue ||
+            tracked.Value.phase == TouchPhase.Ended ||
+            tracked.Value.phase == TouchPhase.Canceled)
+        {
+            _touchFingerId = -1;
+            return Vector2.zero;
+        }
+
+        Vector2 delta = tracked.Value.position - _touchStartPos;
+
+        // Inside deadzone — no movement yet
+        if (delta.magnitude < touchDeadzone) return Vector2.zero;
+
+        // Snap to 8 directions (45° increments)
+        float angle = Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
+        float snapped = Mathf.Round(angle / 45f) * 45f;
+        float rad = snapped * Mathf.Deg2Rad;
+        return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -89,27 +173,20 @@ public class PlayerController : MonoBehaviour
             }
             else if (fish.SizeValue > CurrentSize)
             {
-                // Debug: log the fish that ate the player
                 var tier = fishData.GetTier(fish.SizeValue);
-                Debug.Log($"[PlayerController] Eaten by fish | " +
-                        $"SizeValue: {fish.SizeValue} | " +
-                        $"Speed: {tier.speed} | " +
-                        $"ColliderRadius: {tier.colliderRadius} | " +
-                        $"VisualScale: {tier.visualScale} | " +
-                        $"Sprite: {(tier.sprite != null ? tier.sprite.name : "null")} | " +
-                        $"PlayerSize at death: {CurrentSize}");
+                Debug.Log($"[PlayerController] Eaten by fish | " + $"SizeValue: {fish.SizeValue} | " + $"Speed: {tier.speed} | " + $"ColliderRadius: {tier.colliderRadius} | " +
+                $"VisualScale: {tier.visualScale} | " + $"Sprite: {(tier.sprite != null ? tier.sprite.name : "null")} | " + $"PlayerSize at death: {CurrentSize}");
 
                 EventBus.Publish(new OnPlayerDied { reason = "fish" });
             }
-            // Same size — no effect
         }
-        
     }
 
     public void ResetPlayer()
     {
         transform.position = Vector3.zero;
         CurrentSize = 1;
+        _touchFingerId = -1;   // clear any stale touch on restart
         ApplySize();
     }
 
@@ -122,7 +199,10 @@ public class PlayerController : MonoBehaviour
     private void ApplySize()
     {
         var tier = fishData.GetTier(CurrentSize);
-        _col.radius = tier.colliderRadius;
+        //_col.radius = tier.colliderRadius;
         transform.localScale = Vector3.one * tier.visualScale;
     }
+
+
+
 }
