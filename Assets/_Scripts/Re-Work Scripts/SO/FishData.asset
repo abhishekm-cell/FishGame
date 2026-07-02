@@ -16,20 +16,24 @@ MonoBehaviour:
   - sizeValue: 1
     speed: 2
     colliderRadius: 0.5
+    colliderOffset: {x: -0.5, y: 0}
     sprite: {fileID: 713970491, guid: b4e6a6e5cd8df439f8df825d8972b0d5, type: 3}
     visualScale: 0.5
   - sizeValue: 2
     speed: 3
-    colliderRadius: 0.8
+    colliderRadius: 0.7
+    colliderOffset: {x: -0.55, y: -0.2}
     sprite: {fileID: 1187453296, guid: 7a0d143872cbc4bfbbdd64dd12fc9c14, type: 3}
     visualScale: 0.7
   - sizeValue: 3
     speed: 4
-    colliderRadius: 0.8
+    colliderRadius: 0.6
+    colliderOffset: {x: -0.6, y: -0.1}
     sprite: {fileID: 1675301850, guid: 888cb1384a47e4b3ca3ecd030e77c417, type: 3}
     visualScale: 1
   - sizeValue: 4
     speed: 2
-    colliderRadius: 0.9
+    colliderRadius: 0.5
+    colliderOffset: {x: 0.74, y: -0.02}
     sprite: {fileID: -1084126760, guid: f78c5ce24cbab409f81ecab89dc029f1, type: 3}
     visualScale: 1.2

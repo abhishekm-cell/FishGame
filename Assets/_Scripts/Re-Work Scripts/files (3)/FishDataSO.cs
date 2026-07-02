@@ -6,10 +6,11 @@ public class FishDataSO : ScriptableObject
     [System.Serializable]
     public class SizeTier
     {
-        public int sizeValue;      // 1 = tiny … 5 = huge
+        public int sizeValue;      
         public float speed;
         public float colliderRadius;
-        public Sprite   sprite;
+        public Vector2 colliderOffset;
+        public Sprite sprite;
         [Tooltip("Visual scale applied to the sprite renderer")]
         public float visualScale = 1f;
     }

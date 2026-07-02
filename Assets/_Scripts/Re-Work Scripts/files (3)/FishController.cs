@@ -15,6 +15,7 @@ public class FishController : MonoBehaviour
     private SpriteRenderer _sr;
     private CircleCollider2D _col;
     public event System.Action OnReturnedToPool;
+    private Animator _anim;
  
     void Awake()
     {
@@ -23,6 +24,7 @@ public class FishController : MonoBehaviour
         _col = GetComponent<CircleCollider2D>();
         _rb.gravityScale = 0f;
         _rb.bodyType = RigidbodyType2D.Kinematic;
+        _anim = GetComponent<Animator>();
  
         // Resolved in Awake so they're ready before Init() is called on prewarm objects.
         // Start() never fires on pooled objects that are inactive at scene load.
@@ -46,6 +48,9 @@ public class FishController : MonoBehaviour
         _sr.sprite = tier.sprite;
         _sr.flipX = direction > 0;
         _col.radius = tier.colliderRadius;
+        _col.offset = tier.colliderOffset;
+
+        _anim.Play("Swim");
  
         gameObject.SetActive(true);
     }
