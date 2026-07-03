@@ -45,11 +45,8 @@ public class FishController : MonoBehaviour
         transform.position = new Vector3(startX, yWorld, 0f);
         transform.localScale  = Vector3.one * tier.visualScale;
  
-        _sr.sprite = tier.sprite;
         _sr.flipX = direction > 0;
-        _col.radius = tier.colliderRadius;
-        _col.offset = tier.colliderOffset;
-
+ 
         _anim.Play("Swim");
  
         gameObject.SetActive(true);
@@ -67,11 +64,11 @@ public class FishController : MonoBehaviour
     }
  
     
-
+ 
     public void ReturnToPool()
     {
         OnReturnedToPool?.Invoke();
-        OnReturnedToPool = null; // clear to avoid stale subs on re-pool
-        _pool.ReturnFish(gameObject);
+        OnReturnedToPool = null; 
+        _pool.ReturnFish(gameObject, SizeValue);
     }
 }

@@ -936,9 +936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e78739d2ad88465b99950a33caf6cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefab: {fileID: 4257549390931702469, guid: ba4860ea64d0947488c08feb894a8013, type: 3}
+  fishData: {fileID: 11400000, guid: c2407977a3bdc4b929a0db6c065d0b32, type: 2}
   hookPrefab: {fileID: 4887389662608425327, guid: 0520b783dfa7b4f90bc254ad596d80df, type: 3}
-  fishPoolSize: 20
+  fishPoolSizePerTier: 6
   hookPoolSize: 6
 --- !u!1 &2080400814
 GameObject:
