@@ -7,3 +7,6 @@ public struct OnHookCaught   { public Transform hookTransform; }
 public struct OnScoreChanged { public int score; }
 public struct OnGameStarted  { }
 public struct OnGameOver     { public string reason; public int finalScore; }
+public struct OnGamePaused   { }
+public struct OnGameResumed  { }
+public struct OnReturnToMainMenu { }

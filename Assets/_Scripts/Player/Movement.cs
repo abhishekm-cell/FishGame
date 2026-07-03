@@ -231,7 +231,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("DeSpawner"))
         {
             PlayerDie();
-            gameManager.TriggerGameOver();
+            //gameManager.TriggerGameOver();
             if (startReelCoroutine != null)
             {
                 StopCoroutine(startReelCoroutine);

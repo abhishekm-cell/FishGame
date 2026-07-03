@@ -21,90 +21,90 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         //uiManager.Init(this);
-        SetState(GameStates.MainMenu);
+        //SetState(GameStates.MainMenu);
         highScore = PlayerPrefs.GetInt("HighScore", 0);
         UpdateHighScore();
     }
 
-    void OnEnable()
-    {
-        Events.GameStart += StartGame;
-        Events.PauseRequested += PauseGame;
-        Events.ResumeRequested += ResumeGame;
-        //Events.GameOverRequested += TriggerGameOver;
-        Events.ResetGameRequested += ResetGame;
-        Events.ScoreGained += AddScore;
-    }
+    // void OnEnable()
+    // {
+    //     Events.GameStart += StartGame;
+    //     Events.PauseRequested += PauseGame;
+    //     Events.ResumeRequested += ResumeGame;
+    //     //Events.GameOverRequested += TriggerGameOver;
+    //     Events.ResetGameRequested += ResetGame;
+    //     Events.ScoreGained += AddScore;
+    // }
 
-    void OnDisable()
-    {
-        Events.GameStart -= StartGame;
-        Events.PauseRequested -= PauseGame;
-        Events.ResumeRequested -= ResumeGame;
-        //Events.GameOverRequested -= TriggerGameOver;
-        Events.ResetGameRequested -= ResetGame;
-        Events.ScoreGained -= AddScore;
-    }
+    // void OnDisable()
+    // {
+    //     Events.GameStart -= StartGame;
+    //     Events.PauseRequested -= PauseGame;
+    //     Events.ResumeRequested -= ResumeGame;
+    //     //Events.GameOverRequested -= TriggerGameOver;
+    //     Events.ResetGameRequested -= ResetGame;
+    //     Events.ScoreGained -= AddScore;
+    // }
 
-    private void SetState(GameStates newState)
-    {
-        currentState = newState;
-        Debug.Log("STATE → " + newState);
+    // private void SetState(GameStates newState)
+    // {
+    //     currentState = newState;
+    //     Debug.Log("STATE → " + newState);
 
-        switch (newState)
-        {
-            case GameStates.MainMenu:
-                Time.timeScale = 1f;
-                uiManager.ShowMainMenu();
-                break;
+    //     switch (newState)
+    //     {
+    //         case GameStates.MainMenu:
+    //             Time.timeScale = 1f;
+    //             uiManager.ShowMainMenu();
+    //             break;
 
-            case GameStates.InGame:
-                Time.timeScale = 1f;
-                uiManager.ShowInGame();
-                break;
+    //         case GameStates.InGame:
+    //             Time.timeScale = 1f;
+    //             uiManager.ShowInGame();
+    //             break;
 
-            case GameStates.GamePause:
-                Time.timeScale = 0f;
-                uiManager.ShowPause();
-                break;
+    //         case GameStates.GamePause:
+    //             Time.timeScale = 0f;
+    //             uiManager.ShowPause();
+    //             break;
 
-            case GameStates.GameOver:
-                Time.timeScale = 0f;
-                uiManager.ShowGameOver();
-                break;
-        }
-    }
+    //         case GameStates.GameOver:
+    //             Time.timeScale = 0f;
+    //             uiManager.ShowGameOver();
+    //             break;
+    //     }
+    // }
 
     
-    private void StartGame()
-    {
-        ResetGame();
-        SetState(GameStates.InGame);
-    }
+    // private void StartGame()
+    // {
+    //     ResetGame();
+    //     SetState(GameStates.InGame);
+    // }
 
-    private void PauseGame()
-    {
-        if (currentState == GameStates.InGame)
-        {
-            SetState(GameStates.GamePause);
-        }
+    // private void PauseGame()
+    // {
+    //     if (currentState == GameStates.InGame)
+    //     {
+    //         SetState(GameStates.GamePause);
+    //     }
             
-    }
+    // }
 
-    private void ResumeGame()
-    {
-        if (currentState == GameStates.GamePause)
-        {
-            SetState(GameStates.InGame);
-        }
+    // private void ResumeGame()
+    // {
+    //     if (currentState == GameStates.GamePause)
+    //     {
+    //         SetState(GameStates.InGame);
+    //     }
             
-    }
+    // }
 
-    public void TriggerGameOver()
-    {
-        SetState(GameStates.GameOver);
-        Events.GameOverRequest();
-    }
+    // public void TriggerGameOver()
+    // {
+    //     SetState(GameStates.GameOver);
+    //     Events.GameOverRequest();
+    // }
 
     private void ResetGame()
     {

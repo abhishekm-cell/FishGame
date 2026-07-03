@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (_gameManager.State != GamesManager.GameState.Playing) return;
+        if (_gameManager.State != GameState.Playing) return;
 
         
         Vector2 keyInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_gameManager.State != GamesManager.GameState.Playing) return;
+        if (_gameManager.State != GameState.Playing) return;
 
         if (_isReeling && _hookTransform != null)
         {
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log($"[Player] Trigger hit: {other.gameObject.name} | tag: {other.tag} | layer: {LayerMask.LayerToName(other.gameObject.layer)}");
-        if (_gameManager.State != GamesManager.GameState.Playing) return;
+        if (_gameManager.State != GameState.Playing) return;
         if (_isReeling) return; 
 
         var fish = other.GetComponentInParent<FishController>();

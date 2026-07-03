@@ -10,36 +10,35 @@ public class InGamePanel : MonoBehaviour
 
     [Header("Score UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
-
+ 
     [Header("Button")]
     [SerializeField] private Button pauseButton;
-
+ 
     void OnEnable()
     {
         pauseButton.onClick.AddListener(OnPauseClicked);
         Events.UpdateScore += UpdateScore;
     }
-
+ 
     void OnDisable()
     {
         pauseButton.onClick.RemoveListener(OnPauseClicked);
         Events.UpdateScore -= UpdateScore;
     }
-
+ 
     public void SetReferences(GameManager gameManager)
     {
         gManager = gameManager;
     }
-
+ 
     void OnPauseClicked()
     {
         Debug.Log("Pause Button Clicked");
         AudioManager.Instance.PlaySFX(SoundType.Button);
         AudioManager.Instance.PauseSFX();
-        Events.ShowGamePauseInvoke();
-        Events.PauseRequest();
+        ServiceLocator.Instance.Get<GamesManager>().PauseGame();
     }
-
+ 
     private void UpdateScore(int score)
     {
         scoreText.text = "Score: " + score.ToString();
@@ -49,7 +48,7 @@ public class InGamePanel : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-
+ 
     public void Hide()
     {
         gameObject.SetActive(false);

@@ -12,14 +12,14 @@ public class GamePausePanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentScoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
     
-
+ 
     void OnEnable()
     {
         ButtonListeners();
         Events.UpdateScore += UpdateCurrentScore;
         UpdateHighScore();
     }
-
+ 
     void OnDisable()
     {
         resumeButton.onClick.RemoveListener(OnResumeClicked);
@@ -27,50 +27,46 @@ public class GamePausePanel : MonoBehaviour
         Events.UpdateScore -= UpdateCurrentScore;
         
     }
-
+ 
     private void ButtonListeners()
     {
        resumeButton.onClick.AddListener(OnResumeClicked);
        homeButton.onClick.AddListener(OnHomeClicked); 
     }
-
-
+ 
+ 
     void OnResumeClicked()
     {
         Debug.Log("Resume Button Clicked");
         AudioManager.Instance.PlaySFX(SoundType.Button);
         AudioManager.Instance.ResumeSFX();
-        Events.ShowInGameInvoke();
-        
-        Events.ResumeRequest();
-        
+        ServiceLocator.Instance.Get<GamesManager>().ResumeGame();
     }
-
+ 
     void OnHomeClicked()
     {
         Debug.Log("Home Button Clicked");
         AudioManager.Instance.PlaySFX(SoundType.Button);
-        Events.ResetGameRequest();
-        Events.ShowMainMenuInvoke();
+        ServiceLocator.Instance.Get<GamesManager>().ReturnToMainMenu();
     }  
-
+ 
     public void UpdateCurrentScore(int score)
     {
         currentScoreText.text = $"Score: {score} ";
     }
-
+ 
     public void UpdateHighScore()
     {
         int highScore = PlayerPrefs.GetInt("HighScore");
         highScoreText.text = $"High Score: {highScore} ";
     }
-
-
+ 
+ 
     public void Show()
     {
         gameObject.SetActive(true);
     }
-
+ 
     public void Hide()
     {
         gameObject.SetActive(false);

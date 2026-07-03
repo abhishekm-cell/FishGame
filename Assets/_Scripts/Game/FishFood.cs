@@ -82,6 +82,6 @@ public class FishFood : MonoBehaviour
     private IEnumerator DelayGameOver()
     {
         yield return new WaitForSeconds(data.deathDelay);
-        gManager.TriggerGameOver();
+       // gManager.TriggerGameOver();
     }
 }

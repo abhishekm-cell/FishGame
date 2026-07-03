@@ -12,14 +12,14 @@ public class MainMenuPanel : MonoBehaviour
     [SerializeField] private Button musicOffBtn;
     [SerializeField] private Button SFXOnBtn;
     [SerializeField] private Button SFXOffBtn; 
-
+ 
     [SerializeField] private GameObject musicIconOn,musicIconOff, SFXIconOn, SFXIconOff;
-
+ 
     void OnEnable()
     {
         ButtonListeners();
     }
-
+ 
     void OnDisable()
     {
         startButton.onClick.RemoveListener(StartButtonClicked);
@@ -30,7 +30,7 @@ public class MainMenuPanel : MonoBehaviour
         SFXOnBtn.onClick.RemoveListener(SFXOn);
         SFXOffBtn.onClick.RemoveListener(SFXOff);
     }
-
+ 
     private void ButtonListeners()
     {
         startButton.onClick.AddListener(StartButtonClicked);
@@ -46,25 +46,23 @@ public class MainMenuPanel : MonoBehaviour
     {
         Debug.Log("Start Button Clicked");
 //        AudioManager.Instance.PlaySFX(SoundType.Button);
-        Events.ResetGameRequest();
-        Events.GameStartInvoke();
         //AudioManager.Instance.PlayMusic(SoundType.BGM2);
-        Events.ShowInGameInvoke();
+        ServiceLocator.Instance.Get<GamesManager>().StartGame();
     }
-
+ 
     void InfoButtonClicked()
     {
         Debug.Log("Info Button Clicked");
         Events.InfoPanelRequest();
         //AudioManager.Instance.PlaySFX(SoundType.Button);
     }
-
+ 
     void QuitButtonClicked()
     {
         Application.Quit();
         Debug.Log("Quit Button Clicked");
     }
-
+ 
     private void MusicOn()
     {
         
@@ -72,7 +70,7 @@ public class MainMenuPanel : MonoBehaviour
         musicIconOff.SetActive(true);
         musicIconOn.SetActive(false);
     }
-
+ 
     private void MusicOff()
     {
         
@@ -87,7 +85,7 @@ public class MainMenuPanel : MonoBehaviour
         SFXIconOff.gameObject.SetActive(true);
         SFXIconOn.gameObject.SetActive(false);
     }
-
+ 
     private void SFXOff()
     {
         
@@ -103,11 +101,12 @@ public class MainMenuPanel : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-
+ 
     public void Hide()
     {
         gameObject.SetActive(false);
     }
+ 
 
 
 }

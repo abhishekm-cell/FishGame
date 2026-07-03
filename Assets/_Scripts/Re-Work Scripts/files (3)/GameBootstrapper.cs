@@ -13,10 +13,10 @@ using UnityEngine;
 public class GameBootstrapper : MonoBehaviour
 {
     [Header("Services to register")]
-    [SerializeField] private GamesManager  gameManager;
+    [SerializeField] private GamesManager gameManager;
     [SerializeField] private SpawnManager spawnManager;
-    [SerializeField] private ObjectPool   objectPool;
-    [SerializeField] private UIManagers    uiManager;
+    [SerializeField] private ObjectPool objectPool;
+    [SerializeField] private UIManagers uiManager;
 
     [Header("Non-service dependencies for GameManager")]
     [SerializeField] private PlayerController player;
@@ -30,14 +30,13 @@ public class GameBootstrapper : MonoBehaviour
             return;
         }
 
-        // 1. Register services — order matters: must complete before any Start() runs
+        
         sl.Register<GamesManager>(gameManager);
         sl.Register<SpawnManager>(spawnManager);
         sl.Register<ObjectPool>(objectPool);
         sl.Register<UIManagers>(uiManager);
 
-        // 2. Push direct dependencies into GameManager
-        //    PlayerController is a scene actor, not a registered service
+        
         gameManager.Inject(spawnManager, player);
     }
 }

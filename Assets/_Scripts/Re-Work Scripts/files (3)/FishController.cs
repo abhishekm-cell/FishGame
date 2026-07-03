@@ -58,7 +58,7 @@ public class FishController : MonoBehaviour
     void FixedUpdate()
     {
         if (_gameManager == null) return;
-        if (_gameManager.State != GamesManager.GameState.Playing) return;
+        if (_gameManager.State != GameState.Playing) return;
  
         _rb.MovePosition(_rb.position + Vector2.right * _direction * _speed * Time.fixedDeltaTime);
  

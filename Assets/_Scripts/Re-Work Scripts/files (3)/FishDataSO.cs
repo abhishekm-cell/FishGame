@@ -13,6 +13,8 @@ public class FishDataSO : ScriptableObject
         public Sprite sprite;
         [Tooltip("Visual scale applied to the sprite renderer")]
         public float visualScale = 1f;
+        [Tooltip("Prefab for this tier fish(using self animator). will get used by ObjectPool for polling")]
+        public GameObject preFab;
     }
 
     public SizeTier[] tiers;

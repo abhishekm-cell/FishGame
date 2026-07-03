@@ -46,7 +46,7 @@ public class HookController : MonoBehaviour
     void Update()
     {
         if (_gameManager == null) return;
-        if (_gameManager.State != GamesManager.GameState.Playing) return;
+        if (_gameManager.State != GameState.Playing) return;
 
         if (_isReeling)
         {
